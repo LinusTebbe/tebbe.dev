@@ -40,6 +40,19 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['nuxt-fontawesome', {
+      component: 'fa', 
+      imports: [
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faGithub']
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faEnvelope']
+        },
+      ]
+    }]
   ],
   /*
   ** Build configuration
