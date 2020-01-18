@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen md:flex bg-gray-100">
+  <div class="h-screen md:flex bg-gray-100 overflow-hidden">
     <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-screen px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white"  id="navbar">
       <div class="w-full">
         <img src="/logo.png" class="rounded-2">
@@ -9,8 +9,8 @@
 
       <div class="w-full md:mb-56">
         <ul class="text-xl align-middle">
-          <li><nuxt-link to="/#übermich" class="hover:underline">Über mich</nuxt-link></li>
-          <li><nuxt-link to="/#projekte" class="hover:underline">Projekte</nuxt-link></li>
+          <li @click="close"><nuxt-link :to="{path: '/', hash: '#übermich'}" class="hover:underline">Über mich</nuxt-link></li>
+          <li @click="close"><nuxt-link :to="{path: '/', hash: '#projekte'}" class="hover:underline">Projekte</nuxt-link></li>
         </ul>
       </div>
 
@@ -19,17 +19,16 @@
           <div class="text-left">
             <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']" /> LinusTebbe</a><br>
             <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']" /> linus@tebbe.dev</a>
-          </div>  
+          </div>
         </div>
-      
-        <div class="text-xs block bottom-0 mt-3"><nuxt-link to="/impressum">Impressum</nuxt-link></div>
+        <div class="text-s block bottom-0 mt-3">© {{ new Date().getFullYear() }} | <span @click="close"><nuxt-link to="/impressum" class="hover:underline">Impressum</nuxt-link></span></div>
       </div>
     </div>
-    <div class="flex-1 px-5">
-      <div class="fixed right-0 top-0 m-3 md:hidden cursor-pointer" @click="SideBarHidden = !SideBarHidden">
+    <div class="flex-1 px-5 overflow-auto h-screen" id="content">
+      <div class="fixed right-0 top-0 m-5 md:hidden cursor-pointer z-30" @click="toggle">
         <svg class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
       </div>
-      <div class="block md:hidden fixed w-screen h-screen bg-black top-0 left-0 z-10 opacity-50" :class="{ hidden: SideBarHidden }" @click="SideBarHidden = !SideBarHidden"></div>
+      <div class="block md:hidden fixed w-screen h-screen bg-black top-0 left-0 z-10 opacity-50" :class="{ hidden: SideBarHidden }" @click="toggle"></div>
       <nuxt class="py-5" />
     </div>
   </div>
@@ -39,7 +38,15 @@
 export default {
   data: () => ({
     SideBarHidden: true
-  })
+  }),
+  methods: {
+    toggle () {
+      this.SideBarHidden = !this.SideBarHidden;
+    },
+    close () {
+      this.SideBarHidden = true;
+    }
+  }
 }
 </script>
 

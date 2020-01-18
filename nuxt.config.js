@@ -40,6 +40,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    'vue-scrollto/nuxt',
     ['nuxt-fontawesome', {
       component: 'fa', 
       imports: [
@@ -62,6 +63,29 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  router: {
+    linkExactActiveClass: 'active',
+    scrollBehavior : async (to, from, savedPosition) => {
+      const findEl = async (hash, x) => {
+        return document.querySelector(hash) ||
+          new Promise((resolve, reject) => {
+            if (x > 50) {
+              return resolve()
+            }
+            setTimeout(() => { resolve(findEl(hash, ++x || 1)) }, 100)
+          })
+      }
+      
+      let parent = await findEl('#content');
+
+      if (to.hash) {
+        let el = await findEl(to.hash)
+        return parent.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+      }
+
+      return parent.scrollTo(0, 0);
     }
   }
 }
