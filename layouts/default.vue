@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen md:flex bg-gray-100 overflow-hidden">
-    <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-screen px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white"  id="navbar">
+    <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-full px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
       <div class="w-full">
         <img src="/logo.png" class="rounded-2">
         <div class="text-4xl mt-8">Linus Tebbe</div>
