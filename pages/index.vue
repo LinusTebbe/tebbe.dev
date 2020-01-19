@@ -139,6 +139,7 @@
 </template>
 
 <style lang="css" scoped>
+
   .sub {
     @apply font-normal ml-4 text-lg;
   }

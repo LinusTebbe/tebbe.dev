@@ -16,9 +16,9 @@
 
       <div class="w-full flex flex-col justify-center pb-1">
         <div class="w-full flex justify-center">
-          <div class="text-left">
-            <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']" /> LinusTebbe</a><br>
-            <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']" /> linus@tebbe.dev</a>
+          <div class="text-left text-normal">
+            <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
+            <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']"/> linus@tebbe.dev</a>
           </div>
         </div>
         <div class="text-s block bottom-0 mt-3">© {{ new Date().getFullYear() }} | <span @click="close"><nuxt-link to="/impressum" class="hover:underline">Impressum</nuxt-link></span></div>
@@ -51,6 +51,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.hidden {
+  @apply hidden;
+}
+
+.svg-inline--fa {
+  @apply svg-inline--fa;
+}
+
+.fa-w-16 {
+  @apply fa-w-16;
+}
+
 .customHidden {
   left: -20rem;
 }
