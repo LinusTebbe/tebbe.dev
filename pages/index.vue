@@ -95,8 +95,8 @@
         </div>
       </div>
     </div>
-    <div class="pt-5" id="projekte">
-      <div class="card mt-5">
+    <div class="pt-5 mt-5" id="projekte">
+      <div class="card">
         <div class="text-3xl">Projekte</div>
         <div class="text-gray-600">Meine bisherigen Projekte</div>
       </div>
