@@ -3,7 +3,6 @@
         <div class="card relative">
             <div class="text-3xl">FtpToGit</div>
             <div class="text-gray-600 mb-1">Dezember 2019</div>
-            <a href="https://github.com/LinusTebbe/FtpToGit" target="_blank" class="gray-btn">GitHub Projekt</a>
         </div>
         <div class="card mt-2">
             <div class="text-2xl">Beschreibung</div>
