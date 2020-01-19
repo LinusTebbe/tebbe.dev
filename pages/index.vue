@@ -6,7 +6,7 @@
         <div class="text-lg">
           Ich bin Linus, ein Full-Stack Developer, aus dem Münsterland.<br>
           Aktuell besuche ich ein Berufskolleg für Technik und Gestaltung, bei dem ich dieses Jahr mein Abitur abschließen werde.<br>
-          Ich programmiere hobbymäßig bereits seit ~9 Jahren und bin seit April 2018 beruflich in diesem Bereich tätig.<br>
+          Ich programmiere hobbymäßig bereits seit ~9 Jahren und bin seit März 2018 beruflich in diesem Bereich tätig.<br>
           Zuerst auf MiniJob Basis, seit November 2019 aber auf Freiberuflicher Basis.<br>
         </div>
       </div>
