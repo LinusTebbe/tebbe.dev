@@ -47,3 +47,16 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'CHI - COSTA DEL SOL',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Umsetzung einer Webplatform um zum Kauf/Mieten zur verfügung stehende Immobilien zu präsentieren' }
+      ]
+    }
+  }
+}
+</script>

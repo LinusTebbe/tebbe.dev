@@ -62,3 +62,16 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'pruefstellen.de',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Umsetzung einer Webplatform zum interagieren von Prüfstellen und Endkunden' }
+      ]
+    }
+  }
+}
+</script>

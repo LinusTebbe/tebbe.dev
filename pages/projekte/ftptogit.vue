@@ -42,3 +42,16 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'FtpToGit',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Umsetzung einer Laravel Konsolenanwendung zum Monitoring eines remote FTP Hosts' }
+      ]
+    }
+  }
+}
+</script>

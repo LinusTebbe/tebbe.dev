@@ -1,8 +1,8 @@
 {
   "name": "tebbe.dev",
   "version": "1.0.0",
-  "description": "personal website",
-  "author": "LinusTebbe",
+  "description": "Mein persönliches Portfolio als freiberuflicher Programmierer. Vorherige Projekte, genutzte Technologien und Kontaktmöglichkeiten.",
+  "author": "Linus Tebbe",
   "private": true,
   "scripts": {
     "dev": "nuxt",

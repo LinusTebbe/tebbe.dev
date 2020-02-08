@@ -41,3 +41,16 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'mysql-exporter',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Umsetzung einer Laravel Konsolenanwendung zum Klonen einer entfernten Datenbank auf eine lokale ohne direkten Zugriff' }
+      ]
+    }
+  }
+}
+</script>
