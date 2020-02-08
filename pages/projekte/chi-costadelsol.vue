@@ -37,7 +37,7 @@
             <div class="text-2xl">Umsetzung</div>
             <div class="mt-2 text-lg">
                 Die Umsetzung erfolgte mit dem Symfony Framework.<br>
-                Basierend auf diesem wurde die integriete Task Queue mit einem RabbitMQ Backend für den Background Worker verwendet.<br>
+                Basierend auf diesem wurde die integrierte Task Queue mit einem RabbitMQ Backend für den Background Worker verwendet.<br>
                 Das gesamte Projekt ist in einer docker-compose Datei zusammengestellt, wodurch die komplette Infrastruktur portabel<br>
                 und einfach reproduzierbar wird.<br>
                 <br>
