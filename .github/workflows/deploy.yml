@@ -19,3 +19,4 @@ jobs:
         with:
           build_dir: dist
           fqdn: "tebbe.dev"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
