@@ -9,14 +9,14 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Install 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
           npm install
-          npm run generate
 
-      - name: Deploy 🚀
-        uses: crazy-max/ghaction-github-pages@v2.0.1
+      - name: Generate and Deploy 🚀
+        uses: sterlingwes/gh-pages-deploy-action@v1.1
         with:
-          build_dir: dist
-          fqdn: "tebbe.dev"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          source-directory: ./dist
+          build-command: npm run generate
+          custom-domain: "tebbe.dev"
+          access-token: ${{ secrets.GITHUB_TOKEN }}
