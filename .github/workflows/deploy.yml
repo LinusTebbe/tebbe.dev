@@ -15,8 +15,7 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: crazy-max/ghaction-github-pages@v2.0.1
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          build_dir: build # The folder the action should deploy.
+          fqdn: "tebbe.dev"
