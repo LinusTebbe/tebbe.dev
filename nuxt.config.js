@@ -41,7 +41,7 @@ export default {
   modules: [
     'vue-scrollto/nuxt',
     ['nuxt-fontawesome', {
-      component: 'fa', 
+      component: 'fa',
       imports: [
         {
           set: '@fortawesome/free-brands-svg-icons',
@@ -49,7 +49,7 @@ export default {
         },
         {
           set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faEnvelope']
+          icons: ['faEnvelope', 'faPhone']
         },
       ]
     }]
@@ -76,7 +76,7 @@ export default {
             setTimeout(() => { resolve(findEl(hash, ++x || 1)) }, 100)
           })
       }
-      
+
       let parent = await findEl('#content');
 
       if (to.hash) {

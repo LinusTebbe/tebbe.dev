@@ -18,7 +18,8 @@
         <div class="w-full flex justify-center">
           <div class="text-left text-normal">
             <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
-            <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']"/> linus@tebbe.dev</a>
+            <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']"/> linus@tebbe.dev</a><br>
+            <a href="tel:+4925092094947" class="hover:underline"><fa :icon="['fas', 'phone']"/> 02509-2094947</a>
           </div>
         </div>
         <div class="text-s block bottom-0 mt-3">© {{ new Date().getFullYear() }} | <span @click="close"><nuxt-link to="/impressum" class="hover:underline">Impressum</nuxt-link></span></div>
