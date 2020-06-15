@@ -19,45 +19,45 @@
         <div>
           <div>HTML</div>
           <div>
-            <a href="https://www.php.net" target="_blank">PHP</a>
+            <a href="https://www.php.net" rel="noreferrer" target="_blank">PHP</a>
             <div class="sub">
-              <div><a href="https://laravel.com" target="_blank">Laravel</a></div>
-              <div><a href="https://symfony.com" target="_blank">Symfony</a></div>
+              <div><a href="https://laravel.com" rel="noreferrer" target="_blank">Laravel</a></div>
+              <div><a href="https://symfony.com" rel="noreferrer" target="_blank">Symfony</a></div>
             </div>
           </div>
           <div>
             JS
             <div class="sub">
-              <div><a href="https://vuejs.org" target="_blank">Vue.js</a></div>
-              <div><a href="https://nuxtjs.org" target="_blank">Nuxt.js</a></div>
-              <div><a href="https://jquery.com" target="_blank">jQuery</a></div>
+              <div><a href="https://vuejs.org" rel="noreferrer" target="_blank">Vue.js</a></div>
+              <div><a href="https://nuxtjs.org" rel="noreferrer" target="_blank">Nuxt.js</a></div>
+              <div><a href="https://jquery.com" rel="noreferrer" target="_blank">jQuery</a></div>
             </div>
           </div>
           <div>CSS
             <div class="sub">
-              <div><a href="https://tailwindcss.com" target="_blank">tailwindcss</a></div>
-              <div><a href="https://getbootstrap.com" target="_blank">Bootstrap</a></div>
-              <div><a href="https://getuikit.com" target="_blank">UIkit</a></div>
+              <div><a href="https://tailwindcss.com" rel="noreferrer" target="_blank">tailwindcss</a></div>
+              <div><a href="https://getbootstrap.com" rel="noreferrer" target="_blank">Bootstrap</a></div>
+              <div><a href="https://getuikit.com" rel="noreferrer" target="_blank">UIkit</a></div>
             </div>
           </div>
-          <div><a href="https://wordpress.org" target="_blank">WordPress</a></div>
+          <div><a href="https://wordpress.org" rel="noreferrer" target="_blank">WordPress</a></div>
         </div>
         <div>
           <div>
             Datenbanken
             <div class="sub">
-              <div><a href="https://mariadb.org" target="_blank">MariaDB</a></div>
-              <div><a href="https://www.mysql.com" target="_blank">MySQL</a></div>
-              <div><a href="https://www.sqlite.org" target="_blank">SQLite</a></div>
+              <div><a href="https://mariadb.org" rel="noreferrer" target="_blank">MariaDB</a></div>
+              <div><a href="https://www.mysql.com" rel="noreferrer" target="_blank">MySQL</a></div>
+              <div><a href="https://www.sqlite.org" rel="noreferrer" target="_blank">SQLite</a></div>
               <div>SQL Server</div>
             </div>
           </div>
           <div>
-            <a href="https://www.python.org" target="_blank">Python</a>
+            <a href="https://www.python.org" rel="noreferrer" target="_blank">Python</a>
             <div class="sub">
-              <div><a href="https://www.djangoproject.com" target="_blank">django</a></div>
-              <div><a href="https://palletsprojects.com/p/flask/" target="_blank">Flask</a></div>
-              <div><a href="https://pandas.pydata.org" target="_blank">pandas</a></div>
+              <div><a href="https://www.djangoproject.com" rel="noreferrer" target="_blank">django</a></div>
+              <div><a href="https://palletsprojects.com/p/flask/" rel="noreferrer" target="_blank">Flask</a></div>
+              <div><a href="https://pandas.pydata.org" rel="noreferrer" target="_blank">pandas</a></div>
             </div>
           </div>
           <div>
@@ -77,19 +77,19 @@
           <div>
             Deployment
             <div class="sub">
-              <div><a href="https://www.terraform.io" target="_blank">Terraform</a></div>
-              <div><a href="https://www.ansible.com" target="_blank">Ansible</a></div>
+              <div><a href="https://www.terraform.io" rel="noreferrer" target="_blank">Terraform</a></div>
+              <div><a href="https://www.ansible.com" rel="noreferrer" target="_blank">Ansible</a></div>
             </div>
           </div>
           <div>
             Betriebssysteme
             <div class="sub">
               <div>Windows Server</div>
-              <div><a href="https://www.debian.org" target="_blank">Debian</a></div>
-              <div><a href="https://ubuntu.com" target="_blank">Ubuntu</a></div>
-              <div><a href="https://www.centos.org" target="_blank">CentOS</a></div>
-              <div><a href="https://www.archlinux.org" target="_blank">Arch Linux</a></div>
-              <div><a href="https://www.freebsd.org" target="_blank">FreeBSD</a></div>
+              <div><a href="https://www.debian.org" rel="noreferrer" target="_blank">Debian</a></div>
+              <div><a href="https://ubuntu.com" rel="noreferrer" target="_blank">Ubuntu</a></div>
+              <div><a href="https://www.centos.org" rel="noreferrer" target="_blank">CentOS</a></div>
+              <div><a href="https://www.archlinux.org" rel="noreferrer" target="_blank">Arch Linux</a></div>
+              <div><a href="https://www.freebsd.org" rel="noreferrer" target="_blank">FreeBSD</a></div>
             </div>
           </div>
         </div>

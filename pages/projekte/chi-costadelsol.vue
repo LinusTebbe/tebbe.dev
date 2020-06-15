@@ -3,7 +3,7 @@
         <div class="card relative">
             <div class="text-3xl">CHI - COSTA DEL SOL</div>
             <div class="text-gray-600 mb-1">März 2018 - <i>heute</i></div>
-            <a href="https://chi-costadelsol.com" target="_blank" class="gray-btn">Website</a>
+            <a href="https://chi-costadelsol.com" rel="noreferrer" target="_blank" class="gray-btn">Website</a>
         </div>
         <div class="card mt-2">
             <div class="text-2xl">Beschreibung</div>
