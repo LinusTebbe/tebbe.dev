@@ -49,7 +49,7 @@ export default {
         },
         {
           set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faEnvelope']
+          icons: ['faEnvelope', 'faPhone']
         },
       ]
     }],
