@@ -7,8 +7,9 @@
 module.exports = {
   purge: [
     './src/**/*.html',
-    './src/**/*.vue',
-    './src/**/*.jsx',
+    './pages/*.vue',
+    './pages/**/*.vue',
+    './layouts/*.vue'
   ],
   theme: {
     fontFamily: {
