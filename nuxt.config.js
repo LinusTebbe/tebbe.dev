@@ -52,7 +52,8 @@ export default {
           icons: ['faEnvelope']
         },
       ]
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Build configuration
@@ -87,5 +88,8 @@ export default {
       return parent.scrollTo(0, 0);
     },
 
+  },
+  sitemap: {
+    hostname: 'https://tebbe.dev'
   }
 }
