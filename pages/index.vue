@@ -171,10 +171,7 @@
 export default {
   head () {
     return {
-      title: 'Start',
-      meta: [
-        { hid: 'description', name: 'description', content: process.env.npm_package_description }
-      ]
+      title: 'Start'
     }
   }
 }

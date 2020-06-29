@@ -1,7 +1,14 @@
 {
   "name": "tebbe.dev",
   "version": "1.0.0",
-  "description": "Mein persönliches Portfolio als freiberuflicher Programmierer. Vorherige Projekte, genutzte Technologien und Kontaktmöglichkeiten.",
+  "description": "Ich bin Linus Tebbe, ein freiberuflicher Softwareentwickler aus Nottuln. Hier sind einige meiner vorherigen Projekte zu finden.",
+  "meta": {
+    "phone": "02509-2094947",
+    "companyName": "Linus Tebbe, freiberuflicher Programmierer",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "email": "linus@tebbe.dev",
+    "address": "Buxtrup 12, 48301 Nottuln"
+  },
   "author": "Linus Tebbe",
   "private": true,
   "scripts": {
@@ -17,6 +24,7 @@
     "node-sass": "^4.14.1",
     "nuxt": "^2.12.2",
     "nuxt-fontawesome": "^0.4.0",
+    "nuxt-jsonld": "^1.4.10",
     "sass-loader": "^8.0.2",
     "vue-scrollto": "^2.18.1"
   },

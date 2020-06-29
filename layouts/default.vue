@@ -16,10 +16,12 @@
 
       <div class="w-full flex flex-col justify-center pb-1">
         <div class="w-full flex justify-center">
+          {{ meta.telephone }}
           <div class="text-left text-normal">
             <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
-            <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']"/> linus@tebbe.dev</a><br>
-            <a href="tel:+4925092094947" class="hover:underline"><fa :icon="['fas', 'phone']"/> 02509-2094947</a>
+            <a :href="'mailto:' + meta.email" class="hover:underline"><fa :icon="['fas', 'envelope']"/> {{ meta.email }}</a><br>
+            <a v-bind:href="'tel:+49' + meta.telephone" class="hover:underline"><fa :icon="['fas', 'phone']"/>
+              {{ meta.telephone }}</a>
           </div>
         </div>
         <div class="text-s block bottom-0 mt-3">© {{ new Date().getFullYear() }} | <span @click="close"><nuxt-link to="/impressum" class="hover:underline">Impressum</nuxt-link></span></div>
@@ -38,8 +40,22 @@
 <script>
 export default {
   data: () => ({
-    SideBarHidden: true
+    SideBarHidden: true,
+    meta: {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      'name': process.env.npm_package_meta_companyName,
+      'description': process.env.npm_package_description,
+      'email': process.env.npm_package_meta_email,
+      'openingHours': process.env.npm_package_meta_openingHours,
+      'address': process.env.npm_package_meta_address,
+      'telephone': process.env.npm_package_meta_phone,
+      'url': 'https://tebbe.dev'
+    }
   }),
+  jsonld() {
+    return this.meta
+  },
   methods: {
     toggle () {
       this.SideBarHidden = !this.SideBarHidden;
