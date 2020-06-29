@@ -16,7 +16,6 @@
 
       <div class="w-full flex flex-col justify-center pb-1">
         <div class="w-full flex justify-center">
-          {{ meta.telephone }}
           <div class="text-left text-normal">
             <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
             <a :href="'mailto:' + meta.email" class="hover:underline"><fa :icon="['fas', 'envelope']"/> {{ meta.email }}</a><br>
