@@ -3,7 +3,7 @@
         <div class="card relative">
             <div class="text-3xl">pruefstellen.de</div>
             <div class="text-gray-600 mb-1">April 2018 - September 2019</div>
-            <a href="https://pruefstellen.de/" target="_blank" class="gray-btn">Website</a>
+            <a href="https://pruefstellen.de/" rel="noreferrer" target="_blank" class="gray-btn">Website</a>
         </div>
         <div class="card mt-2">
             <div class="text-2xl">Beschreibung</div>

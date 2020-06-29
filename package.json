@@ -21,6 +21,7 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@nuxtjs/sitemap": "^2.3.2",
     "node-sass": "^4.14.1",
     "nuxt": "^2.12.2",
     "nuxt-fontawesome": "^0.4.0",

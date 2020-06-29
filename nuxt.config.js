@@ -54,7 +54,8 @@ export default {
           icons: ['faEnvelope', 'faPhone']
         },
       ]
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Build configuration
@@ -77,16 +78,20 @@ export default {
             }
             setTimeout(() => { resolve(findEl(hash, ++x || 1)) }, 100)
           })
-      }
+      };
 
       let parent = await findEl('#content');
 
       if (to.hash) {
-        let el = await findEl(to.hash)
-        return parent.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+        let el = await findEl(to.hash);
+        return parent.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
       }
 
       return parent.scrollTo(0, 0);
-    }
+    },
+
+  },
+  sitemap: {
+    hostname: 'https://tebbe.dev'
   }
 }
