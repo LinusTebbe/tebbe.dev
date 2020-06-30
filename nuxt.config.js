@@ -1,4 +1,8 @@
 
+const glob = require('glob-fs')({});
+
+const path = require('path');
+
 export default {
   mode: 'universal',
   /*
@@ -35,10 +39,11 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     ['@nuxtjs/google-analytics', {
       id: 'UA-171155557-1'
-    }]
+    }],
   ],
   /*
   ** Nuxt.js modules
@@ -55,7 +60,7 @@ export default {
         },
         {
           set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faEnvelope', 'faPhone']
+          icons: ['faEnvelope', 'faPhone', 'faAdjust']
         },
       ]
     }],
@@ -95,8 +100,17 @@ export default {
     },
 
   },
+  generate: {
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('projekte').only(['path']).fetch()
+
+      return files.map(file => file.path === '/index' ? '/' : file.path)
+    }
+  },
   sitemap: {
     hostname: 'https://tebbe.dev'
   },
-  target: 'static'
+  target: 'static',
+  components: true
 }
