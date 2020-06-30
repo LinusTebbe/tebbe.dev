@@ -1,15 +1,26 @@
 <template>
   <div>
-    <div class="-mt-5 pt-5" id="übermich">
-      <Card>
-        <h1>Über mich</h1>
-        <div class="text-lg">
+    <div class="-mt-5 pt-5 flex flex-wrap" id="übermich">
+      <div class="w-full md:w-1/2 md:pr-2">
+        <Card class="h-full">
+          <h1>Über mich</h1>
           Ich bin Linus, ein Full-Stack Developer, aus dem Münsterland.<br>
-          Aktuell besuche ich ein Berufskolleg für Technik und Gestaltung, bei dem ich dieses Jahr mein Abitur abschließen werde.<br>
-          Ich programmiere hobbymäßig bereits seit ~9 Jahren und bin seit März 2018 beruflich in diesem Bereich tätig.<br>
-          Zuerst auf MiniJob Basis, seit November 2019 aber auf Freiberuflicher Basis.<br>
-        </div>
-      </Card>
+          <br>
+          Sei es eine komplette Webplattform, oder doch nur ein recht simples Kommandozeilen-Tool, ich kann Ihnen behilflich sein!<br>
+          Kontaktieren Sie mich, und ich bin mir sicher, dass ich Ihnen ein gutes Angebot machen kann
+        </Card>
+      </div>
+      <div class="w-full md:w-1/2 md:pl-2">
+        <Card class="h-full">
+          <h1>Benutzte Technologien</h1>
+          SQL (MySQL, MSSQL, etc.)<br>
+          HTML, CSS<br>
+          JS, Node.JS, Vue.JS, Nuxt<br>
+          PHP, Laravel (Zero), Symfony<br>
+          Flutter, Java, Python<br>
+          Linus, Windows, Android<br>
+        </Card>
+      </div>
     </div>
     <div class="pt-5 mt-5" id="projekte">
       <Card>
@@ -30,7 +41,10 @@
 <script>
   export default {
     async asyncData ({ $content }) {
-      const projects = await $content('projekte').only(['title', 'description', 'start', 'end', 'path']).fetch();
+      const projects = await $content('projekte')
+        .only(['title', 'description', 'start', 'end', 'path'])
+        .sortBy('listPosition', 'desc')
+        .fetch();
 
       return {
         projects
@@ -43,34 +57,3 @@
     }
   }
 </script>
-
-<style lang="css" scoped>
-
-  .sub {
-    @apply font-normal ml-4 text-lg;
-  }
-
-  #technologies > div {
-    @apply px-3 w-auto;
-  }
-
-  #technologies a {
-    @apply underline;
-  }
-</style>
-
-<style>
-
-
-.gray-btn {
-  @apply bg-gray-800 shadow text-white font-bold py-1 px-4 rounded text-lg mt-4 inline-block;
-}
-
-.gray-btn:hover {
-  @apply bg-black shadow-lg;
-}
-
-.card {
-  @apply shadow bg-white p-5 rounded-sm;
-}
-</style>

@@ -38,6 +38,7 @@
 </template>
 
 <script>
+
 export default {
   data: () => ({
     SideBarHidden: true,
@@ -66,45 +67,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-.hidden {
-  @apply hidden;
-}
-
-.svg-inline--fa {
-  @apply svg-inline--fa;
-}
-
-.fa-w-16 {
-  @apply fa-w-16;
-}
-
-.customHidden {
-  left: -20rem;
-}
-
-@screen md {
-  .customHidden {
-    left: unset;
-  }
-}
-
-@media (max-height: 800px) {
-  #navbar > div:nth-child(2) {
-    margin-bottom: unset;
-  }
-}
-
-#navbar {
-  transition: all 0.3s;
-}
-
-.noSelect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-</style>

@@ -6,18 +6,15 @@
 */
 module.exports = {
   purge: {
-    enabled: false,
     content: [
       './pages/*.vue',
       './pages/**/*.vue',
       './layouts/*.vue',
       './components/**/*.vue',
       './content/**/*.md',
-      './node_modules/tailwindcss-dark-mode/prefers-dark.js',
     ],
     options: {
-      whitelist: ['dark-mode', 'h1', 'h2', 'h3'],
-      whitelistPatterns: [/dark.*/]
+      whitelist: ['dark-mode'],
     }
   },
   theme: {
