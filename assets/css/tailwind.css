@@ -1,3 +1,55 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+.customHidden {
+  left: -20rem;
+}
+
+@screen md {
+  .customHidden {
+    left: unset;
+  }
+}
+
+@media (max-height: 800px) {
+  #navbar > div:nth-child(2) {
+    margin-bottom: unset;
+  }
+}
+
+#navbar {
+  transition: all 0.3s;
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gray-btn {
+  @apply bg-gray-800 shadow text-white font-bold py-1 px-4 rounded text-lg mt-4 inline-block;
+}
+
+.gray-btn:hover {
+  @apply bg-black shadow-lg;
+}
+
+.card {
+  @apply shadow bg-white p-5 rounded-sm;
+}
