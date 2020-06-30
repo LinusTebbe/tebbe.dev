@@ -45,6 +45,7 @@ export default {
   */
   modules: [
     'vue-scrollto/nuxt',
+    '@nuxt/content',
     ['nuxt-fontawesome', {
       component: 'fa',
       imports: [
@@ -96,5 +97,6 @@ export default {
   },
   sitemap: {
     hostname: 'https://tebbe.dev'
-  }
+  },
+  target: 'static'
 }
