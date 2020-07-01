@@ -32,7 +32,7 @@
       </Card>
       <Card v-for="project in projects" :key="project.path">
         <h3>{{ project.title }}</h3>
-        <div class="text-gray-600 mb-1"><span v-html="project.start"></span><span v-if="project.end"> - <span v-html="project.end"></span></span></div>
+        <ProjectTimespan :project="project"/>
         <div>{{ project.description }}</div>
         <nuxt-link class="gray-btn" :to="project.path">Details</nuxt-link>
       </Card>
@@ -46,7 +46,7 @@
     async asyncData ({ $content }) {
       const projects = await $content('projekte')
         .only(['title', 'description', 'start', 'end', 'path'])
-        .sortBy('listPosition', 'desc')
+        .sortBy('end', 'desc')
         .fetch();
 
       return {

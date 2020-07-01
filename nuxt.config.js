@@ -39,7 +39,12 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: 'UA-171155557-1'
     }],
+    '@nuxtjs/moment'
   ],
+  moment: {
+    defaultLocale: 'de',
+    locales: ['de']
+  },
   /*
   ** Nuxt.js modules
   */

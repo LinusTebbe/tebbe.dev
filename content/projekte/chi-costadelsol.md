@@ -2,9 +2,8 @@
 title: CHI - COSTA DEL SOL  
 description: CHI - COSTA DEL SOL sind spanische Immobilien Markler, tätig in der Costa del sol(auf deutsch Küste der Sonne).  
 link: https://chi-costadelsol.com  
-start: März 2018  
-end: <i>heute</i>  
-listPosition: 99999999
+start: 201803  
+end: 999999  
 ---
 
 <Card>

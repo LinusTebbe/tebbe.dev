@@ -1,8 +1,8 @@
 ---
 title: FtpToGit  
 description: Umsetzung einer Laravel Konsolenanwendung zum Monitoring eines remote FTP Hosts  
-start: Dezember 2019  
-listPosition: 1
+start: 201912
+end: 201912  
 ---
 
 <Card>

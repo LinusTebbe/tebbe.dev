@@ -2,9 +2,8 @@
 title: pruefstellen.de  
 description: Umsetzung einer Webplatform zum interagieren von Prüfstellen und Endkunden  
 link: https://pruefstellen.de  
-start: April 2018  
-end: September 2019  
-listPosition: 0
+start: 201804  
+end: 201909  
 ---
 
 <Card>

@@ -1,8 +1,8 @@
 ---
 title: mysql-exporter  
 description: Umsetzung einer Laravel Konsolenanwendung zum Klonen einer entfernten Datenbank auf eine lokale ohne direkten Zugriff  
-start: Januar 2020  
-listPosition: 2
+start: 202001  
+end: 202001  
 ---
 
 <Card>
