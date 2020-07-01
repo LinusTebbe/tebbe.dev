@@ -20,7 +20,8 @@ Unterstützung von IPv4 & IPv6
 Optisch ansprechend  
 Material Design-Sprache  
 Statisch generierte HTML, um das Hosting zu vereinfachen  
-Übergabe einer abzufragenden IP-Adresse durch GET Parameter
+Übergabe einer abzufragenden IP-Adresse durch GET Parameter  
+Sollte als PWA installierbar sein
 
 </Card>
 
