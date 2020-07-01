@@ -14,6 +14,10 @@ h3 {
   @apply text-xl;
 }
 
+a:not(.gray-btn) {
+  text-decoration: underline;
+}
+
 .customHidden {
   left: -20rem;
 }
