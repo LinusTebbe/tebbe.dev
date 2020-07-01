@@ -11,7 +11,7 @@
           Kontaktieren Sie mich, und ich bin mir sicher, dass ich Ihnen ein gutes Angebot machen kann
         </Card>
       </div>
-      <div class="w-full md:w-1/2 md:pl-2">
+      <div class="w-full pt-4 md:pt-0 md:w-1/2 md:pl-2">
         <Card class="h-full">
           <h1>Benutzte Technologien</h1>
           SQL (MySQL, MSSQL, etc.)<br>
