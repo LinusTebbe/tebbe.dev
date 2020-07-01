@@ -6,6 +6,7 @@
           <h1>Über mich</h1>
           Ich bin Linus, ein Full-Stack Developer, aus dem Münsterland.<br>
           <br>
+          Profitieren Sie von meiner Jahrelangen Erfahrung im Bereich der Webentwicklung.<br>
           Sei es eine komplette Webplattform, oder doch nur ein recht simples Kommandozeilen-Tool, ich kann Ihnen behilflich sein!<br>
           Kontaktieren Sie mich, und ich bin mir sicher, dass ich Ihnen ein gutes Angebot machen kann
         </Card>
@@ -15,7 +16,7 @@
           <h1>Benutzte Technologien</h1>
           SQL (MySQL, MSSQL, etc.)<br>
           HTML, CSS<br>
-          JS, Node.JS, Vue.JS, Nuxt<br>
+          JS, Node.JS, Vue.JS, Nuxt, TailwindCSS<br>
           PHP, Laravel (Zero), Symfony<br>
           Flutter, Java, Python<br>
           Linus, Windows, Android<br>
