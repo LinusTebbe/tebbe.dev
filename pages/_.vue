@@ -4,7 +4,7 @@
       <div class="w-full flex flex-wrap">
         <div class="w-full lg:w-1/2 xl:w-1/3">
           <h1>{{ page.title }}</h1>
-          <div class="text-gray-600 mb-1"><span v-html="page.start"></span><span v-if="page.end"> - <span v-html="page.end"></span></span></div>
+          <ProjectTimespan :project="page"/>
         </div>
         <div class="w-full lg:w-1/2 xl:w-1/4 text-lg">
           {{ page.description }}
