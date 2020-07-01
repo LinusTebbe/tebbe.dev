@@ -2,9 +2,9 @@
   <div class="h-screen md:flex bg-gray-300 dark:bg-black dark:text-white overflow-hidden">
     <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-full px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
       <div class="w-full">
-        <img src="/logo.png" alt="logo" class="rounded-2">
-        <div class="text-4xl mt-8">Linus Tebbe</div>
-        <div>freiberuflicher Programmierer</div>
+        <nuxt-link to="/"><img src="/logo.png" alt="logo" class="rounded-2"></nuxt-link>
+        <h1 class="text-4xl mt-8">Linus Tebbe</h1>
+        <p>freiberuflicher Programmierer</p>
       </div>
 
       <div class="w-full md:mb-56">
@@ -15,6 +15,8 @@
       </div>
 
       <div class="w-full flex flex-col justify-center pb-1">
+        <h3>Kontakt</h3>
+        <hr>
         <div class="w-full flex justify-center">
           <div class="text-left text-normal">
             <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
@@ -22,6 +24,7 @@
             <a href="tel:+4925092094947" class="hover:underline"><fa :icon="['fas', 'phone']"/> 02509-2094947</a>
           </div>
         </div>
+        <hr>
         <div class="text-s block bottom-0 mt-3">© {{ new Date().getFullYear() }} | <span @click="close"><nuxt-link to="/impressum" class="hover:underline">Impressum</nuxt-link></span></div>
       </div>
     </div>
