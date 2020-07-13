@@ -33,7 +33,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@aceforth/nuxt-optimized-images',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     ['@nuxtjs/google-analytics', {
@@ -110,6 +110,13 @@ export default {
   },
   sitemap: {
     hostname: 'https://tebbe.dev'
+  },
+  optimizedImages: {
+    optimizeImages: true,
+    optimizeImagesInDev: true,
+    responsive: {
+      sizes: [800, 700, 600, 500, 400, 300, 200, 100],
+    },
   },
   target: 'static',
   components: true

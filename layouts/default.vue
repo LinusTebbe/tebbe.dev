@@ -2,7 +2,13 @@
   <div class="h-screen md:flex bg-gray-300 dark:bg-black dark:text-white overflow-hidden">
     <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-full px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
       <div class="w-full">
-        <nuxt-link to="/"><img src="/logo.png" alt="logo" class="rounded-2"></nuxt-link>
+        <nuxt-link to="/" class="logo">
+          <picture>
+            <source :srcSet="require('~/assets/img/me.jpg?webp')" type="image/webp" />
+            <source :srcSet="require('~/assets/img/me.jpg?resize').srcSet" type="image/jpeg" />
+            <img :src="require('~/assets/img/me.jpg?size=300')" class="rounded-full" />
+          </picture>
+        </nuxt-link>
         <h1 class="text-4xl mt-8">Linus Tebbe</h1>
         <p>freiberuflicher Programmierer</p>
       </div>

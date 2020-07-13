@@ -28,14 +28,19 @@
     "nuxt": "^2.13.2",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-jsonld": "^1.4.10",
+    "responsive-loader": "^1.2.0",
     "sass-loader": "^8.0.2",
-    "vue-scrollto": "^2.18.1"
+    "sharp": "^0.25.4",
+    "vue-scrollto": "^2.18.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.0.1",
     "@nuxtjs/color-mode": "^1.0.0",
     "@nuxtjs/google-analytics": "^2.3.0",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/tailwindcss": "^2.0",
+    "imagemin-mozjpeg": "^9.0.0",
     "tailwindcss-dark-mode": "^1.1.4"
   }
 }
