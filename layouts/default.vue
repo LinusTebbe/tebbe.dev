@@ -9,6 +9,9 @@
             <img :src="require('~/assets/img/me.jpg?size=300')" class="rounded-full" />
           </picture>
         </nuxt-link>
+      </div>
+
+      <div>
         <h1 class="text-4xl mt-8">Linus Tebbe</h1>
         <p>freiberuflicher Programmierer</p>
       </div>
