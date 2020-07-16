@@ -11,7 +11,7 @@
         </nuxt-link>
       </div>
 
-      <div>
+      <div class="mx-auto">
         <h1 class="text-4xl mt-8">Linus Tebbe</h1>
         <p>freiberuflicher Programmierer</p>
       </div>
