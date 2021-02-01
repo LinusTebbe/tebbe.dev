@@ -21,7 +21,7 @@
           PHP, Laravel (Zero), Symfony<br>
           Wordpress, Shopware<br>
           Flutter, Java, Python<br>
-          Linus, Windows, Android<br>
+          Linux, Windows, Android<br>
         </Card>
       </div>
     </div>
