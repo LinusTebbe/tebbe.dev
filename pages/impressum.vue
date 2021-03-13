@@ -23,7 +23,7 @@
         <div class="my-4">
           <h2>Streitschlichtung</h2>
           Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" class="hover:underline" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>.<br />
-          Unsere E-Mail-Adresse finden Sie oben im Impressum.<br>
+          Meine E-Mail-Adresse finden Sie oben im Impressum.<br>
           <br>
           Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
         </div>
