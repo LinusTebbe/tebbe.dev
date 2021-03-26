@@ -11,7 +11,7 @@
 
         <div class="my-4">
           <h2>Kontakt</h2>
-          Telefon: 02509-2094947<br>
+          Telefon: 0251-53476869<br>
           E-Mail: linus@tebbe.dev
         </div>
 
