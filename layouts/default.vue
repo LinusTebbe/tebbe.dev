@@ -3,7 +3,7 @@
     <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-full px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
       <div class="w-full">
         <nuxt-link to="/" class="logo">
-          <picture>
+          <picture alt="Linus Tebbe">
             <source :srcSet="require('~/assets/img/me.jpg?webp')" type="image/webp" />
             <source :srcSet="require('~/assets/img/me.jpg?resize').srcSet" type="image/jpeg" />
             <img :src="require('~/assets/img/me.jpg?size=300')" class="rounded-full" />
