@@ -28,8 +28,8 @@
         <hr>
         <div class="w-full flex justify-center">
           <div class="text-left text-normal">
-            <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
-            <a href="https://www.linkedin.com/in/linus-tebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'linkedin']"/> Linus Tebbe</a><br>
+            <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank" rel="noreferrer"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
+            <a href="https://www.linkedin.com/in/linus-tebbe/" class="hover:underline" target="_blank" rel="noreferrer"><fa :icon="['fab', 'linkedin']"/> Linus Tebbe</a><br>
             <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']"/> linus@tebbe.dev</a><br>
           </div>
         </div>
