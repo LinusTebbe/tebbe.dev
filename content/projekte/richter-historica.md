@@ -1,6 +1,6 @@
 ---
 title: richter-historica.de
-description: richter-historica.de 
+description: richter-historica.de ist ein Online Shop, der sich auf den Verkauf militärische Antiquitäten aus den Jahren zwischen 1800 und 1945 spezialisiert hat.  
 link: https://richter-historica.de  
 start: 202006  
 end: 999999  
