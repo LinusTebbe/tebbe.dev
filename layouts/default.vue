@@ -42,7 +42,7 @@
         <svg class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
       </div>
       <div class="block md:hidden fixed w-screen h-screen bg-black top-0 left-0 z-10 opacity-50" :class="{ hidden: SideBarHidden }" @click="toggle"></div>
-      <color-mode-picker class="fixed bottom-0 right-0"></color-mode-picker>
+<!--      <color-mode-picker class="fixed bottom-0 right-0"></color-mode-picker>-->
       <nuxt class="py-5" />
     </div>
 
