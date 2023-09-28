@@ -1,6 +1,5 @@
 # tebbe.dev
-
-> personal website
+My personal website showing my current and past projects and functions as a kind of resume
 
 ## Build Setup
 
