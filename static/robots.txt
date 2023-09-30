@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /impressum
-
-Sitemap: https://tebbe.dev/sitemap.xml

@@ -1,62 +1,72 @@
 <template>
   <div>
-    <div class="-mt-5 pt-5 flex flex-wrap" id="übermich">
+    <div class="-mt-5 pt-5 flex flex-wrap" id="aboutme">
       <div class="w-full md:w-1/2 md:pr-2">
         <Card class="h-full">
           <h1>Über mich</h1>
-          Ich bin Linus, ein Full-Stack Developer, aus dem Münsterland.<br>
-          <br>
-          Profitieren Sie von meiner Jahrelangen Erfahrung im Bereich der Webentwicklung.<br>
-          Sei es eine komplette Webplattform, oder doch nur ein Kommandozeilen-Tool, ich kann Ihnen behilflich sein!<br>
-          Kontaktieren Sie mich, und ich bin mir sicher, dass ich Ihnen ein gutes Angebot machen kann!<br>
+          <p>
+            Hi, ich bin Linus.<br>
+            Ein Full-Stack Developer aus dem Münsterland 👋
+          </p>
+          <p>
+            Aktuell bin ich bei CHECK24 im Bereich Hotelvergleich angestellt, arbeite aber privat an einigen weiteren Projekten.
+          </p>
         </Card>
       </div>
       <div class="w-full pt-4 md:pt-0 md:w-1/2 md:pl-2">
         <Card class="h-full">
-          <h1>Verwendete Technologien</h1>
-          SQL (MySQL, MSSQL, etc.)<br>
-          HTML<br>
-          CSS, TailwindCSS, Bootstrap, UIKit<br>
-          JS, Node.JS, Vue.JS, Nuxt<br>
-          PHP, Laravel (Zero), Symfony, Laminas<br>
-          Wordpress, Shopware<br>
-          Flutter, Java, Python<br>
-          Linux, Windows, Android<br>
+          <h1>Meine Skills</h1>
+          <ul>
+            <li>SQL (MySQL, MariaDB, MSSQL, etc.)</li>
+            <li>HTML5, CSS3</li>
+            <li>TailwindCSS, Bootstrap, UIKit</li>
+            <li>JavaScript, Typescript, Node.JS, Vue.JS, Nuxt3</li>
+            <li>PHP, Laravel (Zero), Symfony, Laminas</li>
+            <li>Wordpress, Shopware</li>
+            <li>Dart, Flutter</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Linux, Windows, Android</li>
+          </ul>
         </Card>
       </div>
     </div>
-    <div class="pt-5 mt-5" id="projekte">
+    <div class="pt-5" id="experiences">
+      <Card>
+        <h1>Berufserfahrung</h1>
+        <div>
+          <table class="divide-y-2 divide-gray-700">
+            <ExperienceRow start="11/2019" job-title="Freiberuflicher Softwareentwickler"/>
+            <ExperienceRow start="07/2023" job-title="Professional Software Entwickler" company="CHECK24 Hotel"/>
+            <ExperienceRow start="06/2022" end="06/2023" job-title="Junior Software Entwickler" company="CHECK24 Hotel"/>
+            <ExperienceRow start="08/2020" end="06/2022" job-title="Ausbildung Fachinformatiker" company="CHECK24 Hotel"/>
+          </table>
+        </div>
+      </Card>
+    </div>
+    <div class="pt-5" id="projects">
       <Card>
         <h1>Projekte</h1>
-        <div class="text-gray-600">Meine bisherigen Projekte</div>
+        <div class="text-gray-600">Meine bisherigen & aktuellen Projekte</div>
       </Card>
       <Card v-for="project in projects" :key="project.path">
         <h3>{{ project.title }}</h3>
         <ProjectTimespan :project="project"/>
         <div>{{ project.description }}</div>
-        <nuxt-link class="gray-btn" :to="project.path">Details</nuxt-link>
+        <NuxtLink class="gray-btn" :to="project._path">Details</NuxtLink>
       </Card>
     </div>
 
   </div>
 </template>
 
-<script>
-  export default {
-    async asyncData ({ $content }) {
-      const projects = await $content('projekte')
-        .only(['title', 'description', 'start', 'end', 'path'])
-        .sortBy('end', 'desc')
-        .fetch();
-
-      return {
-        projects
-      }
-    },
-    head () {
-      return {
-        title: 'Start'
-      }
-    }
-  }
+<script setup lang="ts">
+const projects = await queryContent('projekte')
+  .only(['title', 'description', 'start', 'end', '_path'])
+  .sort({'end': -1})
+  .find();
+useHead({
+  title: 'tebbe.dev',
+  titleTemplate: '',
+})
 </script>

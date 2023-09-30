@@ -19,7 +19,34 @@ Ein asynchroner Importer
 
 <Card>
 
-## Umsetzung
+## Technologien
+
+### Backend:
+- PHP, Symfony
+- UiKit, Vue.js
+- RabbitMQ, Mercure
+
+### Frontend:
+- JavaScript, TypeScript
+- Nuxt.JS, Vue.js, Axios
+- TailwindCSS
+
+</Card>
+
+<Card>
+
+## Umsetzung #2
+
+Um mehr mit der Zeit zu gehen wurde das komplette, für den Nutzer sichtbare, Frontend neu gebaut.  
+Dabei wurde darauf geachtet den gesamten Tech Stack zu modernisieren und dadurch für den Kunden schneller, optisch ansprechender und responsiver zu machen.  
+Im Hintergrund ist alles weiterhin über die gleiche, umfangreiche, Admin Oberfläche zu konfigurieren.  
+Aber im Vordergrund wird alles API-First abgerufen, sodass Daten haltung und die Visualisierung jetzt sogar in getrennten Projekten liegen.
+
+</Card>
+
+<Card>
+
+## Umsetzung #1
 
 Die Umsetzung erfolgte mit dem Symfony Framework.  
 Basierend auf diesem wurde die integrierte Task Queue mit einem RabbitMQ Backend für den Background Worker verwendet.  

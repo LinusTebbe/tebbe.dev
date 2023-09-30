@@ -22,7 +22,13 @@ module.exports = {
       display: ['Gilroy', 'sans-serif'],
       body: ['Graphik', 'sans-serif'],
     },
-    darkSelector: '.dark-mode'
+    darkSelector: '.dark-mode',
+    extend: {
+      gridTemplateColumns: {
+        // Complex site-specific column configuration
+        'experiences': 'auto auto auto auto auto auto',
+      }
+    }
   },
   variants: {
     backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd'],
@@ -30,6 +36,5 @@ module.exports = {
     textColor: ['dark', 'dark-hover', 'dark-active', 'dark-placeholder']
   },
   plugins: [
-    require('tailwindcss-dark-mode')()
   ]
 }

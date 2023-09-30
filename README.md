@@ -1,21 +1,24 @@
 # tebbe.dev
-My personal website showing my current and past projects and functions as a kind of resume
 
-## Build Setup
+My personal portfolio
 
-``` bash
-# install dependencies
-$ npm run install
+## Setup
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+Make sure to install the dependencies:
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+```bash
+npm install
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Development Server
+Start the development server on `http://localhost:3000`:
+
+```bash
+npm run dev
+```
+
+Generate the output for uploading to a static host:
+
+```bash
+npm run generate
+```

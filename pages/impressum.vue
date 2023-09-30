@@ -11,8 +11,7 @@
 
         <div class="my-4">
           <h2>Kontakt</h2>
-          Telefon: 0251-53476869<br>
-          E-Mail: linus@tebbe.dev
+          E-Mail: hallo@tebbe.dev
         </div>
 
         <div class="my-4">

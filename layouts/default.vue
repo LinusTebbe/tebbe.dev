@@ -3,11 +3,7 @@
     <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-full px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
       <div class="w-full">
         <nuxt-link to="/" class="logo">
-          <picture>
-            <source :srcSet="require('~/assets/img/me.jpg?webp')" type="image/webp" />
-            <source :srcSet="require('~/assets/img/me.jpg?resize').srcSet" type="image/jpeg" />
-            <img :src="require('~/assets/img/me.jpg?size=300')" class="rounded-full" />
-          </picture>
+          <NuxtPicture format="webp" src="/img/me.jpg" :imgAttrs="{class: 'rounded-full'}" />
         </nuxt-link>
       </div>
 
@@ -18,8 +14,9 @@
 
       <div class="w-full md:mb-56">
         <ul class="text-xl align-middle">
-          <li @click="close"><nuxt-link :to="{path: '/', hash: '#übermich'}" class="hover:underline">Über mich</nuxt-link></li>
-          <li @click="close"><nuxt-link :to="{path: '/', hash: '#projekte'}" class="hover:underline">Projekte</nuxt-link></li>
+          <li @click="close"><nuxt-link :to="{path: '/', hash: '#aboutme'}" class="hover:underline">Über mich</nuxt-link></li>
+          <li @click="close"><nuxt-link :to="{path: '/', hash: '#experiences'}" class="hover:underline">Berufserfahrung</nuxt-link></li>
+          <li @click="close"><nuxt-link :to="{path: '/', hash: '#projects'}" class="hover:underline">Projekte</nuxt-link></li>
         </ul>
       </div>
 
@@ -28,9 +25,9 @@
         <hr>
         <div class="w-full flex justify-center">
           <div class="text-left text-normal">
-            <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'github']"/> LinusTebbe</a><br>
-            <a href="https://www.linkedin.com/in/linus-tebbe/" class="hover:underline" target="_blank"><fa :icon="['fab', 'linkedin']"/> Linus Tebbe</a><br>
-            <a href="mailto:linus@tebbe.dev" class="hover:underline"><fa :icon="['fas', 'envelope']"/> linus@tebbe.dev</a><br>
+            <a href="https://github.com/LinusTebbe/" class="hover:underline" target="_blank"><font-awesome-icon :icon="['fab', 'github']"/> LinusTebbe</a><br>
+            <a href="https://www.linkedin.com/in/linus-tebbe/" class="hover:underline" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin']"/> Linus Tebbe</a><br>
+            <a href="mailto:linus@tebbe.dev" class="hover:underline"><font-awesome-icon :icon="'envelope'"/> linus@tebbe.dev</a><br>
           </div>
         </div>
         <hr>
@@ -42,16 +39,25 @@
         <svg class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
       </div>
       <div class="block md:hidden fixed w-screen h-screen bg-black top-0 left-0 z-10 opacity-50" :class="{ hidden: SideBarHidden }" @click="toggle"></div>
-<!--      <color-mode-picker class="fixed bottom-0 right-0"></color-mode-picker>-->
-      <nuxt class="py-5" />
+      <slot class="py-5" />
     </div>
 
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {faLinkedin, faGithub} from "@fortawesome/fontawesome-free-brands";
+library.add(faEnvelope, faLinkedin, faGithub)
+</script>
+
+<script lang="ts">
+
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 export default {
+  components: {FontAwesomeIcon},
   data: () => ({
     SideBarHidden: true,
     meta: {
@@ -60,9 +66,7 @@ export default {
       'name': process.env.npm_package_meta_companyName,
       'description': process.env.npm_package_description,
       'email': process.env.npm_package_meta_email,
-      'openingHours': process.env.npm_package_meta_openingHours,
       'address': process.env.npm_package_meta_address,
-      'telephone': process.env.npm_package_meta_phone,
       'url': 'https://tebbe.dev'
     }
   }),
