@@ -1,19 +1,16 @@
 <template>
   <div class="h-screen md:flex bg-gray-300 dark:bg-black dark:text-white overflow-hidden">
-    <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-full px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
+    <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-screen px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
       <div class="w-full">
         <nuxt-link to="/" class="logo">
-          <NuxtPicture format="webp" src="/img/me.jpg" :imgAttrs="{class: 'rounded-full'}" />
+          <NuxtPicture format="webp" src="/img/me.jpg" :imgAttrs="{class: 'rounded-full w-full'}" />
         </nuxt-link>
       </div>
 
       <div class="mx-auto">
         <h1 class="text-4xl mt-8">Linus Tebbe</h1>
         <p>freiberuflicher Programmierer</p>
-      </div>
-
-      <div class="w-full md:mb-56">
-        <ul class="text-xl align-middle">
+        <ul class="text-xl align-middle my-2">
           <li @click="close"><nuxt-link :to="{path: '/', hash: '#aboutme'}" class="hover:underline">Über mich</nuxt-link></li>
           <li @click="close"><nuxt-link :to="{path: '/', hash: '#experiences'}" class="hover:underline">Berufserfahrung</nuxt-link></li>
           <li @click="close"><nuxt-link :to="{path: '/', hash: '#projects'}" class="hover:underline">Projekte</nuxt-link></li>
@@ -70,9 +67,6 @@ export default {
       'url': 'https://tebbe.dev'
     }
   }),
-  jsonld() {
-    return this.meta
-  },
   methods: {
     toggle () {
       this.SideBarHidden = !this.SideBarHidden;
