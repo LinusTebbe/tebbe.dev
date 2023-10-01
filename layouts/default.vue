@@ -1,22 +1,22 @@
 <template>
   <div class="h-screen md:flex bg-gray-300 dark:bg-black dark:text-white overflow-hidden">
     <div :class="{ customHidden: SideBarHidden }" class="z-20 fixed md:relative content-between flex-wrap h-screen px-10 pt-5 flex left-0 max-w-xs bg-gray-700 shadow text-center text-white overflow-auto"  id="navbar">
-      <div class="w-full">
+      <div class="w-full flex flex-col grow gap-3 max-h-[120rem]">
         <nuxt-link to="/" class="logo">
           <NuxtPicture format="webp" src="/img/me.jpg" :imgAttrs="{class: 'rounded-full w-full'}" />
         </nuxt-link>
+        <div class="max-h-64 grow flex flex-col place-content-between">
+          <div>
+            <h1 class="text-4xl mt-8">Linus Tebbe</h1>
+            <p>freiberuflicher Programmierer</p>
+          </div>
+          <ul class="text-xl align-middle my-2">
+            <li @click="close"><nuxt-link :to="{path: '/', hash: '#aboutme'}" class="hover:underline">Über mich</nuxt-link></li>
+            <li @click="close"><nuxt-link :to="{path: '/', hash: '#experiences'}" class="hover:underline">Berufserfahrung</nuxt-link></li>
+            <li @click="close"><nuxt-link :to="{path: '/', hash: '#projects'}" class="hover:underline">Projekte</nuxt-link></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="mx-auto">
-        <h1 class="text-4xl mt-8">Linus Tebbe</h1>
-        <p>freiberuflicher Programmierer</p>
-        <ul class="text-xl align-middle my-2">
-          <li @click="close"><nuxt-link :to="{path: '/', hash: '#aboutme'}" class="hover:underline">Über mich</nuxt-link></li>
-          <li @click="close"><nuxt-link :to="{path: '/', hash: '#experiences'}" class="hover:underline">Berufserfahrung</nuxt-link></li>
-          <li @click="close"><nuxt-link :to="{path: '/', hash: '#projects'}" class="hover:underline">Projekte</nuxt-link></li>
-        </ul>
-      </div>
-
       <div class="w-full flex flex-col justify-center pb-1">
         <h3>Kontakt</h3>
         <hr>
