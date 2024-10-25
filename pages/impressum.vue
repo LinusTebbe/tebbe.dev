@@ -5,8 +5,8 @@
         <div class="my-4">
           <h2>Angaben gemäß §5 TMG</h2>
           Linus Tebbe, freiberuflicher Programmierer<br>
-          Achtermannstraße 25<br>
-          48143 Münster
+          Boettgerstr. 7<br>
+          45147 Essen
         </div>
 
         <div class="my-4">
