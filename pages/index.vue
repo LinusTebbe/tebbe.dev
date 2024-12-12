@@ -6,7 +6,7 @@
           <h1>Über mich</h1>
           <p>
             Hi, ich bin Linus.<br>
-            Ein Full-Stack Developer aus dem Münsterland 👋
+            Ein Full-Stack Developer aus Essen 👋
           </p>
           <p>
             Aktuell bin ich bei CHECK24 im Bereich Hotelvergleich angestellt, arbeite aber privat an einigen weiteren Projekten.
@@ -21,7 +21,7 @@
             <li>HTML5, CSS3</li>
             <li>TailwindCSS, Bootstrap, UIKit</li>
             <li>JavaScript, Typescript, Node.JS, Vue.JS, Nuxt3</li>
-            <li>PHP, Laravel (Zero), Symfony, Laminas</li>
+            <li>PHP, Laravel (Zero), Symfony, Laminas, Mezzio</li>
             <li>Wordpress, Shopware</li>
             <li>Dart, Flutter</li>
             <li>Java</li>
@@ -37,7 +37,8 @@
         <div>
           <table class="divide-y-2 divide-gray-700">
             <ExperienceRow start="11/2019" job-title="Freiberuflicher Softwareentwickler"/>
-            <ExperienceRow start="07/2023" job-title="Professional Software Entwickler" company="CHECK24 Hotel"/>
+            <ExperienceRow start="07/2023" job-title="Senior IT Professional" company="Aldi DX"/>
+            <ExperienceRow start="07/2023" end="11/2024" job-title="Professional Software Entwickler" company="CHECK24 Hotel"/>
             <ExperienceRow start="06/2022" end="06/2023" job-title="Junior Software Entwickler" company="CHECK24 Hotel"/>
             <ExperienceRow start="08/2020" end="06/2022" job-title="Ausbildung Fachinformatiker" company="CHECK24 Hotel"/>
           </table>
