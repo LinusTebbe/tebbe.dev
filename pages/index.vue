@@ -37,7 +37,7 @@
         <div>
           <table class="divide-y-2 divide-gray-700">
             <ExperienceRow start="11/2019" job-title="Freiberuflicher Softwareentwickler"/>
-            <ExperienceRow start="07/2023" job-title="Senior IT Professional" company="Aldi DX"/>
+            <ExperienceRow start="12/2024" job-title="Senior IT Professional" company="Aldi DX"/>
             <ExperienceRow start="07/2023" end="11/2024" job-title="Professional Software Entwickler" company="CHECK24 Hotel"/>
             <ExperienceRow start="06/2022" end="06/2023" job-title="Junior Software Entwickler" company="CHECK24 Hotel"/>
             <ExperienceRow start="08/2020" end="06/2022" job-title="Ausbildung Fachinformatiker" company="CHECK24 Hotel"/>
