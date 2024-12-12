@@ -8,9 +8,6 @@
             Hi, ich bin Linus.<br>
             Ein Full-Stack Developer aus Essen 👋
           </p>
-          <p>
-            Aktuell bin ich bei CHECK24 im Bereich Hotelvergleich angestellt, arbeite aber privat an einigen weiteren Projekten.
-          </p>
         </Card>
       </div>
       <div class="w-full pt-4 md:pt-0 md:w-1/2 md:pl-2">
