@@ -3,7 +3,7 @@ title: db-crawler
 description: Ein Crawler für die öffentlichen Schnittstellen der Deutschen Bahn.
 dateStart: "2019-04"
 dateEnd: "2019-05"
-tags: [ rest, docker, rabbitmq, sql, git, cicd, terraform ]
+tags: [ rest, docker, rabbitmq, sql, git, cicd, terraform, python ]
 ---
 
 ## Über das Projekt

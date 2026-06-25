@@ -3,7 +3,7 @@ title: db-crawler
 description: A crawler for Deutsche Bahn's public interfaces.
 dateStart: "2019-04"
 dateEnd: "2019-05"
-tags: [ rest, docker, rabbitmq, sql, git, cicd, terraform ]
+tags: [ rest, docker, rabbitmq, sql, git, cicd, terraform, python ]
 ---
 
 ## About the Project
