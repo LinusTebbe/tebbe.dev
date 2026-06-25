@@ -53,6 +53,7 @@ const filteredEducation = computed(() => {
 useSeoMeta({
   title: cvName,
   titleTemplate: '',
+  twitterCard: 'summary',
   description: () => profile.value?.summary,
 })
 </script>

@@ -21,6 +21,11 @@ export default defineNuxtConfig({
       script: [
         { innerHTML: themeInitScript },
       ],
+      meta: [
+        { name: 'theme-color', content: '#a6791c' },
+        { name: 'theme-color', content: '#14161a',
+          media: '(prefers-color-scheme: dark)' }
+      ]
     },
   },
   css: ['~/assets/css/main.css'],
