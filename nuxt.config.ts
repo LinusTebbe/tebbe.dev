@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     url: 'https://tebbe.dev',
     name: 'Linus Tebbe'
   },
+  ogImage: {
+    enabled: false,
+  },
   app: {
     head: {
       link: [
