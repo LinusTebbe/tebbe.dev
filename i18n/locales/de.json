@@ -31,5 +31,8 @@
   "cv": {
     "summary": "Zusammenfassung",
     "projectsQualifier": "Auszug"
+  },
+  "footer": {
+    "imprint": "Impressum"
   }
 }

@@ -63,7 +63,7 @@ const profileSchema = z.object({
 function pages(locale: Locale) {
   return defineCollection({
     type: 'page',
-    source: { include: `${locale}/*.md` },
+    source: { include: `${locale}/*.md`, prefix: '/' },
   })
 }
 
