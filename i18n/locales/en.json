@@ -1,0 +1,35 @@
+{
+  "common": {
+    "clearFilter": "Clear filter"
+  },
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects"
+  },
+  "theme": {
+    "system": "Auto",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "home": {
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "languages": "Languages",
+    "viewProject": "View project",
+    "sideGig": "part-time"
+  },
+  "projects": {
+    "visitSite": "Visit site",
+    "viewRepo": "View repository",
+    "back": "Back to projects"
+  },
+  "experience": {
+    "back": "Back to experience"
+  },
+  "cv": {
+    "summary": "Summary",
+    "projectsQualifier": "Excerpt"
+  }
+}

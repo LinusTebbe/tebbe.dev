@@ -1,0 +1,35 @@
+{
+  "common": {
+    "clearFilter": "Filter zurücksetzen"
+  },
+  "nav": {
+    "experience": "Erfahrung",
+    "projects": "Projekte"
+  },
+  "theme": {
+    "system": "Automatisch",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
+  "home": {
+    "skills": "Kenntnisse",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "projects": "Projekte",
+    "languages": "Sprachen",
+    "viewProject": "Projekt ansehen",
+    "sideGig": "Nebenberuflich"
+  },
+  "projects": {
+    "visitSite": "Seite besuchen",
+    "viewRepo": "Repository ansehen",
+    "back": "Zurück zu Projekten"
+  },
+  "experience": {
+    "back": "Zurück zu Erfahrung"
+  },
+  "cv": {
+    "summary": "Zusammenfassung",
+    "projectsQualifier": "Auszug"
+  }
+}

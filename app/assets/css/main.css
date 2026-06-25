@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+/* Manual dark-mode override: `dark:` utilities activate when `.dark` is set
+   on <html> (by the theme composable), instead of only following OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Semantic colour tokens, not raw Tailwind shades: components use bg-surface,
+ * text-content, etc. once, and flip meaning under html.dark — no dark:
+ * variants needed for the base palette. Tailwind's generated utilities
+ * (.bg-surface, .text-content, ...) reference these as var(), so overriding
+ * the value under html.dark is enough to retheme everything that uses them.
+ */
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-surface: #f7f6f3;
+  --color-surface-muted: #ece9e3;
+  --color-content: #1b1d1f;
+  --color-content-muted: #5b5e63;
+  --color-signal: #a6791c;
+  --color-edge: #ddd9d1;
+}
+
+html.dark {
+  --color-surface: #14161a;
+  --color-surface-muted: #1d2025;
+  --color-content: #e7e5e0;
+  --color-content-muted: #93969b;
+  --color-signal: #e3ae3e;
+  --color-edge: #2a2d33;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-surface);
+    color: var(--color-content);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+.prose-content {
+  color: var(--color-content);
+}
+
+.prose-content :where(h2, h3) {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-content :where(p, ul, ol) {
+  margin-top: 0.75rem;
+}
+
+.prose-content :where(ul, ol) {
+  padding-left: 1.25rem;
+}
+
+.prose-content li {
+  list-style: circle;
+}
+
+.filter-fade-move,
+.filter-fade-enter-active,
+.filter-fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.filter-fade-enter-from,
+.filter-fade-leave-to {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.filter-fade-leave-active {
+  position: absolute;
+}
