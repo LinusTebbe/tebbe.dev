@@ -9,5 +9,3 @@ highlights:
   - Leitung der Migration des Produktinformations-Stacks auf eine neue Symfony-Anwendung
   - Übernahme von Rufbereitschaft und untersuchen von komplexen business kritischen Bugs
 ---
-
-## Temp

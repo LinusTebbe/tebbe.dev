@@ -20,7 +20,7 @@ const { data } = await useAsyncData(
   { watch: [locale] },
 )
 
-const { cvEmail, cvWebsite, cvGithub, cvLinkedIn, cvName } = useRuntimeConfig().public
+const { cvEmail, cvGithub, cvLinkedIn, cvName } = useRuntimeConfig().public
 
 
 const profile = computed(() => data.value?.profile)
@@ -74,10 +74,9 @@ useSeoMeta({
           {{ profile.summary }}
         </p>
         <ul class="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-content-muted">
-          <li>{{ cvEmail }}</li>
-          <li><a :href="cvWebsite" class="hover:text-signal" target="_blank">{{ cvWebsite }}</a></li>
-          <li><a :href="cvGithub" class="hover:text-signal" target="_blank">GitHub</a></li>
-          <li><a :href="cvLinkedIn" class="hover:text-signal" target="_blank">LinkedIn</a></li>
+          <li><a :href="`mailto:${cvEmail}`">{{ cvEmail }}<span class="text-content-muted text-xs">↗</span></a></li>
+          <li><a :href="cvGithub" class="hover:text-signal" target="_blank">GitHub<span class="text-content-muted text-xs">↗</span></a></li>
+          <li><a :href="cvLinkedIn" class="hover:text-signal" target="_blank">LinkedIn<span class="text-content-muted text-xs">↗</span></a></li>
         </ul>
       </div>
     </section>
@@ -137,11 +136,12 @@ useSeoMeta({
           <p class="font-mono text-xs text-content-muted">
             [{{ formatDateRange({ dateStart: item.dateStart, dateEnd: item.dateEnd }, locale) }}]
           </p>
-          <NuxtLink v-if="item.body.value.length > 0" :to="localePath(item.path)" class="mt-0.5 block font-display font-medium hover:text-signal">
+          <NuxtLink v-if="item.body.value.length > 0" :to="localePath(item.path)" class="mt-0.5 inline-flex items-center gap-1 font-display font-medium hover:text-signal">
             {{ item.role }} · {{ item.company }}
             <i v-if="item.sideGig" class="text-xs text-content-muted">
               ({{ t('home.sideGig') }})
             </i>
+            <span class="text-content-muted text-xs">↗</span>
           </NuxtLink>
           <p v-else class="mt-0.5 block font-display font-medium">
             {{ item.role }} · {{ item.company }}

@@ -10,4 +10,5 @@ highlights:
   - Entwicklung von Webanwendungen und APIs für Kundenprojekte
   - Erstellen von Pflichten- und Lastenheften in Abstimmung mit Kunden
 ---
-##
+Bereits während meines Abiturs habe ich mich als Freiberufler selbstständig gemacht, um mir neben der Schule etwas dazu zu verdienen.  
+Eines meiner ersten Projekte betreue und entwickle ich bis heute noch.  

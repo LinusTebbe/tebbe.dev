@@ -9,5 +9,3 @@ highlights:
   - Led the migration of the product information stack to a new Symfony application
   - Took on on-call duty and investigated complex business-critical bugs
 ---
-
-## Temp
