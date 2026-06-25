@@ -16,4 +16,4 @@ wurde und als Backend direkt die API von ARIN verwendet.
 
 Das Tool richtet sich an Entwickler, Systemadministratoren und alle, die schnell Informationen über IP-Adressen benötigen.
 Die Abfrage erfolgt in Echtzeit und liefert detaillierte Informationen wie Registrar,
-Registrierungsdatum, Nameserver und weitere relevante WHOIS-Daten. die 
+Registrierungsdatum, Nameserver und weitere relevante WHOIS-Daten. 

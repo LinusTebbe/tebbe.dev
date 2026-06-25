@@ -1,0 +1,105 @@
+categories:
+  - name: Databases
+    items:
+      - slug: sql
+        name: SQL (MySQL, MariaDB)
+      - slug: sqlite
+        name: SQLite
+  - name: Frontend
+    items:
+      - slug: html5
+        name: HTML5
+      - slug: css3
+        name: CSS3
+      - slug: tailwindcss
+        name: Tailwind CSS
+      - slug: bootstrap
+        name: Bootstrap
+      - slug: uikit
+        name: UIkit
+      - slug: extjs
+        name: Ext JS
+  - name: JavaScript Ecosystem
+    items:
+      - slug: javascript
+        name: JavaScript
+      - slug: typescript
+        name: TypeScript
+      - slug: nodejs
+        name: Node.js
+      - slug: vuejs
+        name: Vue.js
+      - slug: nuxt
+        name: Nuxt.JS
+      - slug: deno
+        name: Deno
+  - name: Backend
+    items:
+      - slug: php
+        name: PHP
+      - slug: laravel
+        name: Laravel
+      - slug: symfony
+        name: Symfony
+      - slug: laminas
+        name: Laminas
+      - slug: mezzio
+        name: Mezzio
+      - slug: zend
+        name: Zend Framework
+      - slug: wordpress
+        name: WordPress
+      - slug: shopware
+        name: Shopware
+      - slug: spryker
+        name: Spryker
+  - name: Mobile
+    items:
+      - slug: dart
+        name: Dart
+      - slug: flutter
+        name: Flutter
+      - slug: android
+        name: Android
+  - name: Other Languages
+    items:
+      - slug: java
+        name: Java
+      - slug: python
+        name: Python
+  - name: Operating Systems
+    items:
+      - slug: linux
+        name: Linux
+      - slug: windows
+        name: Windows
+  - name: Other
+    items:
+      - slug: git
+        name: Git
+      - slug: docker
+        name: Docker
+      - slug: jenkins
+        name: Jenkins
+      - slug: jvm
+        name: JVM
+      - slug: aws
+        name: AWS
+      - slug: cloudflare
+        name: Cloudflare
+      - slug: nginx
+        name: Nginx
+      - slug: redis
+        name: Redis
+      - slug: networking
+        name: Networking
+      - slug: rabbitmq
+        name: RabbitMQ
+      - slug: oidc
+        name: OIDC
+      - slug: rest
+        name: REST
+      - slug: terraform
+        name: Terraform
+      - slug: cicd
+        name: CI/CD

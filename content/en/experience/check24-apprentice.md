@@ -1,0 +1,7 @@
+---
+company: CHECK24 Hotel
+role: IT Specialist Apprentice
+dateStart: "2020-08"
+dateEnd: "2022-06"
+tags: [php, mezzio, laminas, zend, sql, docker, git, html5, extjs, cicd]
+---
