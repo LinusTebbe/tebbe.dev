@@ -40,6 +40,25 @@ useSeoMeta({
   title: () => data.value?.item.title ?? '',
   description: () => data.value?.item.description ?? '',
 })
+
+if (data.value?.kind === 'project') {
+  const project = data.value.item
+  defineOgImageComponent('Project', {
+    title: project.title,
+    description: project.description ?? '',
+    dateRange: formatDateRange({ dateStart: project.dateStart, dateEnd: project.dateEnd }, locale.value),
+    tags: resolveTagNames(project.tags ?? [], data.value.categories).slice(0, 6),
+  })
+}
+else if (data.value?.kind === 'experience') {
+  const experience = data.value.item
+  defineOgImageComponent('Experience', {
+    role: experience.role,
+    company: experience.company,
+    dateRange: formatDateRange({ dateStart: experience.dateStart, dateEnd: experience.dateEnd }, locale.value),
+    tags: resolveTagNames(experience.tags ?? [], data.value.categories).slice(0, 6),
+  })
+}
 </script>
 
 <template>

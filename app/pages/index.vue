@@ -53,8 +53,14 @@ const filteredEducation = computed(() => {
 useSeoMeta({
   title: cvName,
   titleTemplate: '',
-  twitterCard: 'summary',
+  twitterCard: 'summary_large_image',
   description: () => profile.value?.summary,
+})
+
+defineOgImageComponent('Index', {
+  name: cvName,
+  headline: profile.value?.headline ?? '',
+  summary: profile.value?.summary ?? '',
 })
 </script>
 

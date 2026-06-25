@@ -4,13 +4,17 @@ const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');var
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxtjs/seo', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxt/fonts', '@nuxtjs/i18n', '@nuxtjs/seo', '@nuxt/image'],
   site: {
     url: 'https://tebbe.dev',
     name: 'Linus Tebbe'
   },
-  ogImage: {
-    enabled: false,
+  fonts: {
+    families: [
+      { name: 'Space Grotesk', weights: [500, 600, 700], global: true },
+      { name: 'IBM Plex Sans', weights: [400, 500, 600], global: true },
+      { name: 'IBM Plex Mono', weights: [400, 500], global: true },
+    ],
   },
   app: {
     head: {
