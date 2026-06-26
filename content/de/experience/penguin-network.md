@@ -5,7 +5,7 @@ dateStart: "2025-01"
 dateEnd: "9999-99"
 sideGig: true
 tags: [nuxt, javascript, typescript, java, jvm, networking, linux, docker, rabbitmq, cloudflare, aws, oidc, deno, vuejs, laravel, tailwindcss, html5, sqlite, nodejs, symfony, nginx, terraform, git, cicd]
-projects: ['dukcc-bot']
+projects: ['dukcc-bot', 'routing']
 highlights:
   - Orchestrierung zahlreicher Gameserver
   - Verhandlungen mit Partnern
