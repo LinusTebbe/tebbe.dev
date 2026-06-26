@@ -4,6 +4,7 @@ description: A search and filter app for discovering Steam games by genre, tags,
 dateStart: "2024-06"
 dateEnd: "2024-12"
 link: https://game-finder.app/search
+featuredInCv: true
 tags: [php, symfony, nuxt, sql, rest, html5, css3, vuejs, nginx, git, docker, cicd, tailwindcss]
 ---
 

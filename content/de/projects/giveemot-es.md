@@ -6,7 +6,6 @@ dateEnd: "2025-07"
 link: https://giveemot.es
 repo: https://github.com/LinusTebbe/giveemot.es
 tags: [ deno, cloudflare, html5, css3, typescript, git, cicd ]
-featuredInCv: true
 ---
 
 ## Über das Projekt

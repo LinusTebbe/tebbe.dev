@@ -110,7 +110,7 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
       // extraction (pdftotext, and most ATS parsers) groups repeated
       // right-aligned runs into their own "column" and pulls them out of
       // order — verified by extracting this file with pdftotext.
-      { text: `${item.role} · ${item.company}`, bold: true, margin: [0, 8, 0, 0], headlineLevel: 2 },
+      { text: [{ text: `${item.role} · ${item.company}`, bold: true }, ...(item.sideGig ? [{ text: ` (${t('home.sideGig')})`, bold: false, color: '#555555', fontSize: 9.5 }] : [])], margin: [0, 8, 0, 0], headlineLevel: 2 },
       { text: formatDateRange({ dateStart: item.dateStart, dateEnd: item.dateEnd }, locale), color: '#555555', fontSize: 9.5 },
       ...((item.highlights ?? []).length ? [{ ul: item.highlights, margin: [0, 2, 0, 0] }] : []),
       // ...((item.tags ?? []).length ? [{ text: resolveTagNames((item.tags ?? []), categories).join(', '), color: '#555555', fontSize: 9, margin: [0, 2, 0, 0] }] : []),
