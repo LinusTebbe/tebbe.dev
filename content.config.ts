@@ -1,7 +1,5 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
-
-const locales = ['en', 'de'] as const
-type Locale = typeof locales[number]
+import {Languages} from "./shared/types/languages";
 
 const projectSchema = z.object({
   dateStart: z.string(),
@@ -62,7 +60,7 @@ const profileSchema = z.object({
 })
 
 // General pages (home, about, ...): one markdown file per top-level route.
-function pages(locale: Locale) {
+function pages(locale: Languages) {
   return defineCollection({
     type: 'page',
     source: { include: `${locale}/*.md`, prefix: '/' },
@@ -70,7 +68,7 @@ function pages(locale: Locale) {
 }
 
 // Project detail pages: long-form markdown body + structured frontmatter.
-function projects(locale: Locale) {
+function projects(locale: Languages) {
   return defineCollection({
     type: 'page',
     source: { include: `${locale}/projects/**`, prefix: '/projects' },
@@ -79,7 +77,7 @@ function projects(locale: Locale) {
 }
 
 // Work experience entries: structured records, no rendered page.
-function experience(locale: Locale) {
+function experience(locale: Languages) {
   return defineCollection({
     type: 'page',
     source: { include: `${locale}/experience/**`, prefix: '/experience' },
@@ -87,7 +85,7 @@ function experience(locale: Locale) {
   })
 }
 
-function education(locale: Locale) {
+function education(locale: Languages) {
   return defineCollection({
     type: 'page',
     source: { include: `${locale}/education/**`, prefix: '/education' },
@@ -97,7 +95,7 @@ function education(locale: Locale) {
 
 // Canonical skill/tag taxonomy, grouped by category. `slug` is referenced
 // from the `tags` field of projects/experience/education in every locale.
-function skills(locale: Locale) {
+function skills(locale: Languages) {
   return defineCollection({
     type: 'data',
     source: { include: `${locale}/skills.yml` },
@@ -106,7 +104,7 @@ function skills(locale: Locale) {
 }
 
 // Personal data + summary used to render the on-site CV and the generated PDF.
-function profile(locale: Locale) {
+function profile(locale: Languages) {
   return defineCollection({
     type: 'data',
     source: { include: `${locale}/profile.md` },

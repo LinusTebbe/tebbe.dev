@@ -57,7 +57,7 @@ useSeoMeta({
   description: () => profile.value?.summary,
 })
 
-defineOgImageComponent('Index', {
+defineOgImage('Index', {
   name: cvName,
   headline: profile.value?.headline ?? '',
   summary: profile.value?.summary ?? '',
@@ -159,7 +159,7 @@ defineOgImageComponent('Index', {
           <p class="font-mono text-xs text-content-muted">
             [{{ formatDateRange({ dateStart: item.dateStart, dateEnd: item.dateEnd }, locale) }}]
           </p>
-          <NuxtLink v-if="item.body.value.length > 0" :to="localePath(item.path)" class="mt-0.5 inline-flex items-center gap-1 font-display font-medium hover:text-signal">
+          <NuxtLink v-if="item.body?.value?.length" :to="localePath(item.path)" class="mt-0.5 inline-flex items-center gap-1 font-display font-medium hover:text-signal">
             {{ item.role }} · {{ item.company }}
             <i v-if="item.sideGig" class="text-xs text-content-muted">
               ({{ t('home.sideGig') }})
@@ -200,7 +200,7 @@ defineOgImageComponent('Index', {
           <p class="font-mono text-xs text-content-muted">
             [{{ formatDateRange({ dateStart: item.dateStart, dateEnd: item.dateEnd }, locale) }}]
           </p>
-          <NuxtLink v-if="item.body.value.length > 0 || item.projects?.length" :to="localePath(item.path)" class="mt-0.5 inline-flex items-center gap-1 font-medium hover:text-signal">
+          <NuxtLink v-if="item.body?.value.length || item.projects?.length" :to="localePath(item.path)" class="mt-0.5 inline-flex items-center gap-1 font-medium hover:text-signal">
             {{ item.degree }} · {{ item.institution }}
             <span class="text-content-muted text-xs">↗</span>
           </NuxtLink>
