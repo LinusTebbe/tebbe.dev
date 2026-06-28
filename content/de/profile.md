@@ -9,4 +9,13 @@ languages:
     level: Muttersprache
   - name: Englisch
     level: Fließend (C1)
+openToWork:
+  - java
+  - typescript
+  - php
+  - symfony
+  - laravel
+  - sql
+  - vuejs
+  - nuxt
 ---

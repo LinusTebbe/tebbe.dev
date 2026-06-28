@@ -101,6 +101,12 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
 
     { text: t('cv.summary'), style: 'sectionTitle', headlineLevel: 1 },
     { text: profile.summary, margin: [0, 6, 0, 0] },
+
+    ...((profile.openToWork ?? []).length ? [
+      makeDivider(),
+      { text: t('cv.openToWork'), style: 'sectionTitle', headlineLevel: 1 },
+      { text: resolveTagNames(profile.openToWork ?? [], categories).join(', '), margin: [0, 6, 0, 0] },
+    ] : []),
     makeDivider(),
 
     { text: t('home.experience'), style: 'sectionTitle', headlineLevel: 1 },

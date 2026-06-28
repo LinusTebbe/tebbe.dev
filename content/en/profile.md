@@ -9,4 +9,13 @@ languages:
     level: Native
   - name: English
     level: Fluent (C1)
+openToWork:
+  - java
+  - typescript
+  - php
+  - symfony
+  - laravel
+  - sql
+  - vuejs
+  - nuxt
 ---

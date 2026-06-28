@@ -57,6 +57,7 @@ const profileSchema = z.object({
     name: z.string(),
     level: z.string(),
   })).default([]),
+  openToWork: z.array(z.string()).default([]),
 })
 
 // General pages (home, about, ...): one markdown file per top-level route.

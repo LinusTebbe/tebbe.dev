@@ -17,6 +17,7 @@
     "education": "Ausbildung",
     "projects": "Projekte",
     "languages": "Sprachen",
+    "openToWork": "Offen für Stellen mit",
     "viewProject": "Projekt ansehen",
     "sideGig": "Nebenberuflich"
   },
@@ -30,7 +31,8 @@
   },
   "cv": {
     "summary": "Zusammenfassung",
-    "projectsQualifier": "Auszug"
+    "projectsQualifier": "Auszug",
+    "openToWork": "Offen für Stellen mit"
   },
   "footer": {
     "imprint": "Impressum"

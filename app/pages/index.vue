@@ -88,6 +88,22 @@ defineOgImageComponent('Index', {
       </div>
     </section>
 
+    <section v-if="profile.openToWork?.length" id="open-to-work" class="mt-10">
+      <h2 class="font-mono text-xs uppercase tracking-widest text-content-muted">
+        {{ t('home.openToWork') }}
+      </h2>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <TagChip
+          v-for="tag in resolveTagItems(profile.openToWork ?? [], categories)"
+          :key="tag.slug"
+          :slug="tag.slug"
+          :name="tag.name"
+          :active="activeTag === tag.slug"
+          @click="toggleTag"
+        />
+      </div>
+    </section>
+
     <section id="languages" class="mt-10">
       <h2 class="font-mono text-xs uppercase tracking-widest text-content-muted">
         {{ t('home.languages') }}

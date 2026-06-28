@@ -17,6 +17,7 @@
     "education": "Education",
     "projects": "Projects",
     "languages": "Languages",
+    "openToWork": "Open to Roles In",
     "viewProject": "View project",
     "sideGig": "part-time"
   },
@@ -30,7 +31,8 @@
   },
   "cv": {
     "summary": "Summary",
-    "projectsQualifier": "Excerpt"
+    "projectsQualifier": "Excerpt",
+    "openToWork": "Open to Roles In"
   },
   "footer": {
     "imprint": "Imprint"
