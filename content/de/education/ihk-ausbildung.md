@@ -7,4 +7,5 @@ highlights:
     - "Berufsschulnote: 1,5"
     - "IHK Note: 2,0"
 tags: [java, networking, sql]
+projects: ['kinoBE']
 ---

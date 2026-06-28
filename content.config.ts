@@ -34,6 +34,7 @@ const educationSchema = z.object({
   dateEnd: z.string(),
   highlights: z.array(z.string()).default([]),
   tags: z.array(z.string()).default([]),
+  projects: z.array(z.string()).default([]),
 })
 
 const skillsSchema = z.object({
@@ -86,11 +87,10 @@ function experience(locale: Locale) {
   })
 }
 
-// Education entries: structured records, no rendered page.
 function education(locale: Locale) {
   return defineCollection({
-    type: 'data',
-    source: { include: `${locale}/education/**` },
+    type: 'page',
+    source: { include: `${locale}/education/**`, prefix: '/education' },
     schema: educationSchema,
   })
 }

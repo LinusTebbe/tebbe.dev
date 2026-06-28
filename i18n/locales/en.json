@@ -29,6 +29,9 @@
   "experience": {
     "back": "Back to experience"
   },
+  "education": {
+    "back": "Back to education"
+  },
   "cv": {
     "summary": "Summary",
     "projectsQualifier": "Excerpt",

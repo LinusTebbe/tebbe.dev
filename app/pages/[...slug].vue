@@ -28,6 +28,15 @@ const { data } = await useAsyncData(
       return { kind: 'experience' as const, item: experience, categories: skills?.categories ?? [], projects: projects ?? [] }
     }
 
+    const educationCollection = locale.value === 'de' ? 'education_de' as const : 'education_en' as const
+    const education = await queryCollection(educationCollection).path(path.value).first()
+    if (education) {
+      const projects = await queryCollection(projectsCollection).order('dateEnd', 'DESC').order('dateStart', 'DESC').where('title', 'IN', education.projects).all()
+      // No detail page unless there is something to show beyond the list entry.
+      if (education.body.value.length === 0 && projects.length === 0) return null
+      return { kind: 'education' as const, item: education, categories: skills?.categories ?? [], projects: projects ?? [] }
+    }
+
     return null
   },
   { watch: [locale, path] },
@@ -57,6 +66,15 @@ else if (data.value?.kind === 'experience') {
     company: experience.company,
     dateRange: formatDateRange({ dateStart: experience.dateStart, dateEnd: experience.dateEnd }, locale.value),
     tags: resolveTagNames(experience.tags ?? [], data.value.categories).slice(0, 6),
+  })
+}
+else if (data.value?.kind === 'education') {
+  const education = data.value.item
+  defineOgImageComponent('Education', {
+    degree: education.degree,
+    institution: education.institution,
+    dateRange: formatDateRange({ dateStart: education.dateStart, dateEnd: education.dateEnd }, locale.value),
+    tags: resolveTagNames(education.tags ?? [], data.value.categories).slice(0, 6),
   })
 }
 </script>
@@ -117,6 +135,47 @@ else if (data.value?.kind === 'experience') {
         </span>
       </div>
       <ContentRenderer
+          :value="data.item"
+          class="prose-content mt-6"
+      />
+      <div v-if="data.projects.length > 0">
+        <h1 class="mt-3 font-display text-2xl font-semibold tracking-tight">{{ t('home.projects') }}</h1>
+        <div class="mt-3 grid gap-3 sm:grid-cols-2">
+          <ProjectCard
+            v-for="project in data.projects"
+            :key="project.path"
+            :project="project"
+            :activeTag="null"
+            :categories="data.categories"
+            :tagSelectable="false"
+          />
+        </div>
+      </div>
+    </template>
+    <template v-else-if="data?.kind === 'education'">
+      <NuxtLink
+          :to="`${localePath('/')}#education`"
+          class="font-mono text-xs text-content-muted hover:text-signal"
+      >
+        ← {{ t('education.back') }}
+      </NuxtLink>
+      <h1 class="mt-3 font-display text-2xl font-semibold tracking-tight">
+        {{ data.item.degree }} · {{ data.item.institution }}
+      </h1>
+      <p class="mt-1 font-mono text-xs text-content-muted">
+        [{{ formatDateRange({ dateStart: data.item.dateStart, dateEnd: data.item.dateEnd }, locale) }}]
+      </p>
+      <div class="mt-2 flex flex-wrap gap-1.5">
+        <span
+            v-for="tag in resolveTagNames((data.item.tags ?? []), data.categories)"
+            :key="tag"
+            class="rounded-full border border-edge px-2.5 py-1 font-mono text-xs text-content-muted"
+        >
+          {{ tag }}
+        </span>
+      </div>
+      <ContentRenderer
+          v-if="data.item.body.value.length > 0"
           :value="data.item"
           class="prose-content mt-6"
       />

@@ -7,4 +7,5 @@ highlights:
     - "Vocational school grade: 1.5"
     - "IHK grade: 2.0"
 tags: [java, networking, sql]
+projects: ['kinoBE']
 ---

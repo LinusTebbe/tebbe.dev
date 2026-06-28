@@ -200,7 +200,11 @@ defineOgImageComponent('Index', {
           <p class="font-mono text-xs text-content-muted">
             [{{ formatDateRange({ dateStart: item.dateStart, dateEnd: item.dateEnd }, locale) }}]
           </p>
-          <p class="mt-0.5 font-medium">
+          <NuxtLink v-if="item.body.value.length > 0 || item.projects?.length" :to="localePath(item.path)" class="mt-0.5 inline-flex items-center gap-1 font-medium hover:text-signal">
+            {{ item.degree }} · {{ item.institution }}
+            <span class="text-content-muted text-xs">↗</span>
+          </NuxtLink>
+          <p v-else class="mt-0.5 font-medium">
             {{ item.degree }} · {{ item.institution }}
           </p>
           <ul v-if="item.highlights?.length" class="mt-1 list-disc pl-5 text-sm text-content-muted">
