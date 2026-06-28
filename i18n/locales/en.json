@@ -32,6 +32,7 @@
   "cv": {
     "summary": "Summary",
     "projectsQualifier": "Excerpt",
+    "projectsHint": "selection — full list at",
     "openToWork": "Open to Roles In"
   },
   "footer": {

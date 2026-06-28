@@ -32,6 +32,7 @@
   "cv": {
     "summary": "Zusammenfassung",
     "projectsQualifier": "Auszug",
+    "projectsHint": "Auswahl — vollständige Liste unter",
     "openToWork": "Offen für Stellen mit"
   },
   "footer": {

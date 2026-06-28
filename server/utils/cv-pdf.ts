@@ -73,6 +73,8 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
   const { cvPhone, cvAddress, cvBirthDate } = useRuntimeConfig()
   const { cvEmail, cvWebsite, cvGithub, cvLinkedIn, cvName } = useRuntimeConfig().public
 
+  const projectsUrl = locale === 'de' ? `${cvWebsite}/de#projects` : `${cvWebsite}/#projects`
+
   const birthDateLabel = cvBirthDate
     ? (() => {
         const formatted = new Intl.DateTimeFormat(locale === 'de' ? 'de-DE' : 'en-US', {
@@ -132,7 +134,15 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
 
     ...(projects.length > 0 ? [
       makeDivider(),
-      { text: t('home.projects'), style: 'sectionTitle', headlineLevel: 1 },
+      {
+        text: [
+          { text: t('home.projects') },
+          { text: `   ${t('cv.projectsHint')} `, bold: false, fontSize: 9.5, color: '#555555' },
+          { text: projectsUrl, link: projectsUrl, bold: false, fontSize: 9.5, color: '#1a4f8b', decoration: 'underline' },
+        ],
+        style: 'sectionTitle',
+        headlineLevel: 1,
+      },
       ...projects.flatMap(item => [
         { text: [{ text: item.title, bold: true }, ...(item.link ? [{ text: ` · ${item.link}`, bold: false, color: '#555555' }] : (item.repo ? [{ text: ` · ${item.repo}`, bold: false, color: '#555555' }] : []))], margin: [0, 8, 0, 0], headlineLevel: 2 },
         { text: formatDateRange({ dateStart: item.dateStart, dateEnd: item.dateEnd }, locale), color: '#555555', fontSize: 9.5 },
