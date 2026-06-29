@@ -31,6 +31,10 @@ categories:
         name: Vue.js
       - slug: nuxt
         name: Nuxt.JS
+      - slug: react
+        name: React
+      - slug: next
+        name: Next.JS
       - slug: deno
         name: Deno
   - name: PHP-Ökosystem

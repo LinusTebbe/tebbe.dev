@@ -18,4 +18,7 @@ openToWork:
   - sql
   - vuejs
   - nuxt
+  - react
+  - next
+  - go
 ---
