@@ -39,6 +39,7 @@ html.dark {
     color: var(--color-content);
     font-family: var(--font-sans);
     scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
     transition: background-color 0.2s ease, color 0.2s ease;
   }
 
