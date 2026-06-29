@@ -33,7 +33,7 @@ categories:
         name: Nuxt.JS
       - slug: deno
         name: Deno
-  - name: Backend
+  - name: PHP Ecosystem
     items:
       - slug: php
         name: PHP
@@ -67,6 +67,8 @@ categories:
         name: Java
       - slug: python
         name: Python
+      - slug: go
+        name: Go
   - name: Operating Systems
     items:
       - slug: linux
