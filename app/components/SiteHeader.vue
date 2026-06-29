@@ -57,28 +57,28 @@ watch(() => route.path, async () => {
 
 <template>
   <header ref="headerEl" class="sticky top-0 z-10 border-b border-edge bg-surface/90 backdrop-blur">
-    <nav class="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
+    <nav class="mx-auto flex max-w-2xl items-center gap-3 px-4 py-3 sm:justify-between">
       <NuxtLink
         :to="localePath('/')"
-        class="font-display text-base font-semibold tracking-tight"
+        class="mr-auto shrink-0 whitespace-nowrap font-display text-base font-semibold tracking-tight sm:mr-0"
       >
         Linus Tebbe
       </NuxtLink>
       <NuxtLink
         :to="`${localePath('/')}#experience`"
         :class="activeSection === 'experience' ? 'text-signal' : 'text-content-muted hover:text-content'"
-        class="transition-colors"
+        class="hidden shrink-0 transition-colors sm:inline"
       >
         {{ t('nav.experience') }}
       </NuxtLink>
       <NuxtLink
         :to="`${localePath('/')}#projects`"
         :class="activeSection === 'projects' ? 'text-signal' : 'text-content-muted hover:text-content'"
-        class="transition-colors"
+        class="hidden shrink-0 transition-colors sm:inline"
       >
         {{ t('nav.projects') }}
       </NuxtLink>
-      <div class="flex items-center gap-4 font-mono text-xs">
+      <div class="flex shrink-0 items-center gap-3 font-mono text-xs sm:gap-4">
         <span class="flex items-center gap-2 pl-4">
           <NuxtLink
             v-for="l in locales"
