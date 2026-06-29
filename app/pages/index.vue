@@ -29,6 +29,10 @@ const education = computed(() => data.value?.education ?? [])
 const projects = computed(() => data.value?.projects ?? [])
 const categories = computed(() => data.value?.categories ?? [])
 
+const skillCategories = computed(() =>
+  filterCategoriesByEntries(categories.value, projects.value, experience.value, education.value),
+)
+
 const activeTag = ref<string | null>(null)
 
 function toggleTag(slug: string) {
@@ -115,12 +119,12 @@ defineOgImage('Index', {
       </ul>
     </section>
 
-    <section id="skills" class="mt-12">
+    <section v-if="skillCategories.length" id="skills" class="mt-12">
       <h2 class="font-mono text-xs uppercase tracking-widest text-content-muted">
         {{ t('home.skills') }}
       </h2>
       <div class="mt-3 space-y-3">
-        <div v-for="category in categories" :key="category.name">
+        <div v-for="category in skillCategories" :key="category.name">
           <p class="text-xs text-content-muted">
             {{ category.name }}
           </p>

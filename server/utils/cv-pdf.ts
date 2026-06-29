@@ -57,9 +57,12 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
     queryCollection(event, `experience_${locale}`).order('featured', 'DESC').order('dateEnd', 'DESC').order('dateStart', 'DESC').all(),
     queryCollection(event, `education_${locale}`).order('dateEnd', 'DESC').order('dateStart', 'DESC').all(),
     queryCollection(event, `skills_${locale}`).first(),
-    queryCollection(event, `projects_${locale}`).where('featuredInCv', '=', true).order('dateEnd', 'DESC').order('dateStart', 'DESC').all(),
+    queryCollection(event, `projects_${locale}`).order('dateEnd', 'DESC').order('dateStart', 'DESC').all(),
     useTranslation(event),
   ])
+
+  const featuredProjects = projects.filter(project => project.featuredInCv)
+  const skillCategories = filterCategoriesByEntries(skills?.categories ?? [], projects, experience, education)
 
   if (!profile) {
     throw createError({ statusCode: 404, statusMessage: 'CV profile not found' })
@@ -132,7 +135,7 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
       ...((item.highlights ?? []).length ? [{ ul: item.highlights, margin: [0, 2, 0, 0] }] : []),
     ]),
 
-    ...(projects.length > 0 ? [
+    ...(featuredProjects.length > 0 ? [
       makeDivider(),
       {
         text: [
@@ -143,7 +146,7 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
         style: 'sectionTitle',
         headlineLevel: 1,
       },
-      ...projects.flatMap(item => [
+      ...featuredProjects.flatMap(item => [
         { text: [{ text: item.title, bold: true }, ...(item.link ? [{ text: ` · ${item.link}`, bold: false, color: '#555555' }] : (item.repo ? [{ text: ` · ${item.repo}`, bold: false, color: '#555555' }] : []))], margin: [0, 8, 0, 0], headlineLevel: 2 },
         { text: formatDateRange({ dateStart: item.dateStart, dateEnd: item.dateEnd }, locale), color: '#555555', fontSize: 9.5 },
         ...(item.description ? [{ text: item.description, margin: [0, 2, 0, 0] }] : []),
@@ -153,7 +156,7 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
 
     makeDivider(),
     { text: t('home.skills'), style: 'sectionTitle', headlineLevel: 1 },
-    ...categories.map(category => ({
+    ...skillCategories.map(category => ({
       text: [
         { text: `${category.name}: `, bold: true },
         category.items.map(item => item.name).join(', '),
@@ -166,7 +169,7 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
     { text: (profile.languages ?? []).map(language => `${language.name} — ${language.level}`).join('   ·   '), margin: [0, 6, 0, 0] },
   ]
 
-  const keywords = categories.flatMap(category => category.items.map(item => item.name)).join(', ')
+  const keywords = skillCategories.flatMap(category => category.items.map(item => item.name)).join(', ')
 
   const docDefinition = {
     info: {
