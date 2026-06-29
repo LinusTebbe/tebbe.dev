@@ -10,15 +10,13 @@ languages:
   - name: English
     level: Fluent (C1)
 openToWork:
-  - java
-  - typescript
   - php
   - symfony
   - laravel
-  - sql
+  - typescript
+  - javascript
   - vuejs
-  - nuxt
   - react
-  - next
-  - go
+  - nodejs
+  - java
 ---
