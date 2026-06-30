@@ -25,6 +25,10 @@ export function assertCvAccess(event: H3Event) {
   if (process.env.NODE_ENV !== 'production') return
   const expectedKey = useRuntimeConfig().cvAccessKey
   const providedKey = getQuery(event).key
+  console.log({
+    expectedKey,
+    providedKey,
+  })
   if (!expectedKey || providedKey !== expectedKey) {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
