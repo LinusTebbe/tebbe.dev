@@ -6,6 +6,9 @@
 .cache
 dist
 
+# Build-generated CV PDFs (bundled as server assets at build time)
+server/assets/cv
+
 # Node dependencies
 node_modules
 

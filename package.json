@@ -26,6 +26,9 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/pdfmake": "^0.3.3",
+    "js-yaml": "^5.2.0",
     "tailwindcss": "^4.3.1"
   }
 }

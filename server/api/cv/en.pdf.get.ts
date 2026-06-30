@@ -1,6 +1,8 @@
 export default defineEventHandler(async (event) => {
   assertCvAccess(event)
-  const buffer = await buildCvPdf(event, 'en')
+  // Generated at build time and bundled as a server asset (build/generate-cv.ts).
+  const buffer = await useStorage('assets:server').getItemRaw('cv/en.pdf')
+  if (!buffer) throw createError({ statusCode: 404, statusMessage: 'CV not found' })
   setHeader(event, 'Content-Type', 'application/pdf')
   setHeader(event, 'Content-Disposition', 'inline; filename="Linus-Tebbe-CV.pdf"')
   return buffer

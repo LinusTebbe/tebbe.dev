@@ -72,6 +72,12 @@ export default defineNuxtConfig({
       cvLinkedIn: 'https://www.linkedin.com/in/linus-tebbe/',
     },
   },
+  hooks: {
+    async 'nitro:build:before'(nitro) {
+      const { generateCvPdfs } = await import('./build/generate-cv')
+      await generateCvPdfs(nitro.options.rootDir, nitro.options.runtimeConfig as never)
+    },
+  },
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
 })
