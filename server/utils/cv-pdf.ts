@@ -42,7 +42,8 @@ async function loadPhoto(photoPath?: string): Promise<{ svg: string, width: numb
     const buffer = await readFile(absolutePath)
     const mime = ext === '.png' ? 'image/png' : 'image/jpeg'
     return { image: `data:${mime};base64,${buffer.toString('base64')}`, width: 165 }
-  } catch {
+  } catch (e) {
+    console.log(e)
     return null
   }
 }
