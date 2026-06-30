@@ -23,7 +23,7 @@ pdfMake.setUrlAccessPolicy(() => false)
 
 export function assertCvAccess(event: H3Event) {
   if (process.env.NODE_ENV !== 'production') return
-  const expectedKey = useRuntimeConfig().cvAccessKey
+  const expectedKey = useRuntimeConfig(event).cvAccessKey
   const providedKey = getQuery(event).key
   console.log({
     expectedKey,
@@ -77,8 +77,9 @@ export async function buildCvPdf(event: H3Event, locale: 'en' | 'de'): Promise<B
 
   // Phone/address/birthDate live only in server-only runtimeConfig (env vars),
   // never in the content tree — see the comment on profileSchema for why.
-  const { cvPhone, cvAddress, cvBirthDate } = useRuntimeConfig()
-  const { cvEmail, cvWebsite, cvGithub, cvLinkedIn, cvName } = useRuntimeConfig().public
+  const config = useRuntimeConfig(event)
+  const { cvPhone, cvAddress, cvBirthDate } = config
+  const { cvEmail, cvWebsite, cvGithub, cvLinkedIn, cvName } = config.public
 
   const projectsUrl = locale === 'de' ? `${cvWebsite}/de#projects` : `${cvWebsite}/#projects`
 
