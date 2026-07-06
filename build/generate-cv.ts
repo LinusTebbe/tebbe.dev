@@ -109,9 +109,12 @@ async function buildLocale(rootDir: string, locale: Languages, config: RuntimeCo
       website: config.public.cvWebsite,
       github: config.public.cvGithub,
       linkedin: config.public.cvLinkedIn,
-      phone: config.cvPhone || undefined,
-      address: config.cvAddress || undefined,
-      birthDate: config.cvBirthDate || undefined,
+      // NUXT_-prefixed env vars only override runtimeConfig at *runtime*; at
+      // build time (nitro:build:before) config holds the empty defaults, so
+      // read the private contact fields straight from the (dotenv-loaded) env.
+      phone: process.env.NUXT_CV_PHONE || config.cvPhone || undefined,
+      address: process.env.NUXT_CV_ADDRESS || config.cvAddress || undefined,
+      birthDate: process.env.NUXT_CV_BIRTH_DATE || config.cvBirthDate || undefined,
     },
   }
 }
