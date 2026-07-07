@@ -5,7 +5,6 @@ dateStart: "2026-03"
 dateEnd: "2026-04"
 repo: "https://github.com/LinusTebbe/ikea-watcher"
 tags: [ typescript, deno, rest, git ]
-featuredInCv: true
 ---
 
 ## About the Project
