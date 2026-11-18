@@ -107,5 +107,9 @@ categories:
         name: REST
       - slug: terraform
         name: Terraform
+      - slug: ansible
+        name: Ansible
+      - slug: agentic-coding
+        name: Agentic Coding
       - slug: cicd
         name: CI/CD

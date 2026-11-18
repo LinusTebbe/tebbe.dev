@@ -4,7 +4,7 @@ role: Freelance Software Developer
 dateStart: "2019-11"
 dateEnd: "9999-99"
 sideGig: true
-tags: [php, laravel, symfony, shopware, vuejs, nuxt, javascript, typescript, linux, rest, html5, css3, tailwindcss, docker, git, nodejs, cloudflare, nginx, cicd]
+tags: [php, laravel, symfony, shopware, vuejs, nuxt, javascript, typescript, linux, rest, html5, css3, tailwindcss, docker, git, nodejs, cloudflare, nginx, cicd, agentic-coding]
 projects: ['chi-costadelsol.com', 'richter-historica.de', 'XML Transformer', 'mysql-exporter', 'FtpToGit']
 highlights:
   - Development of web applications and APIs for client projects

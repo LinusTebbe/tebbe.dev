@@ -12,3 +12,6 @@ tags: [ rest, git, terraform, aws ]
 Routing ist eine Terraform Konfiguration, welche die Routing Infrastruktur des PenguinNetworks abbildet.  
 Es kümmert sich um die automatische Erstellung und Provisionierung von Hetzner Cloud Servern.  
 Diese Server werden dazu genutzt, um den Datenverkehr von Spielern aktiv zu lenken und so unvorteilhafte interkontinentale Routen zu vermeiden.
+
+Dieses Projekt wurde inzwischen eingestellt und die gewonnenen Erkenntnisse sind in das Squall-Projekt eingeflossen.  
+Es hat gezeigt, dass eine gezieltere Steuerung des Datenverkehrs und das niedrig halten der TCP-RTT die Verbindungsstabilität und das Spielerlebnis deutlich verbessert.

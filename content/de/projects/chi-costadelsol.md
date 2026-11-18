@@ -5,7 +5,7 @@ dateStart: "2018-03"
 dateEnd: "9999-99"
 link: "https://chi-costadelsol.com"
 featuredInCv: true
-tags: [php, symfony, nuxt, javascript, tailwind, rabbitmq, uikit, rest, css3, vuejs, docker, nginx, networking, git, linux]
+tags: [php, symfony, nuxt, javascript, tailwind, rabbitmq, uikit, rest, css3, vuejs, docker, nginx, networking, git, linux, agentic-coding]
 ---
 
 ## Über das Projekt
