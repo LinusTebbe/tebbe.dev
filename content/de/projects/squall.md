@@ -3,6 +3,7 @@ title: Squall
 description: Eine Anycast-Routing-Plattform, die Traffic von globalen Ingress-Servern über ein internes Fabric zum Exit-Node leitet, der dem Origin am nächsten liegt.
 dateStart: "2026-09"
 dateEnd: "9999-99"
+featuredInCv: true
 tags: [ rest, git, ansible, go, networking, agentic-coding ]
 ---
 
