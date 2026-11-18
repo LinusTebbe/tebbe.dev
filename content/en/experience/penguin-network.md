@@ -7,7 +7,7 @@ sideGig: true
 tags: [nuxt, javascript, typescript, java, jvm, go, networking, linux, docker, rabbitmq, cloudflare, aws, oidc, deno, vuejs, laravel, tailwindcss, html5, sqlite, nodejs, symfony, nginx, terraform, git, cicd, agentic-coding]
 projects: ['dukcc-bot', 'routing', 'squall']
 highlights:
-  - Orchestration of numerous game servers, a global geo-routing solution as well as numerous smaller high availability services
+  - Orchestration of game servers, a global geo-routing solution as well as smaller high availability services
   - Developing full-stack in house solutions to enhance player experience
   - Conceptualization, development, operation and sourcing of a complex IT infrastructure
 ---

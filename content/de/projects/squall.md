@@ -1,6 +1,6 @@
 ---
 title: Squall
-description: Eine Anycast-Routing-Plattform, die Traffic von globalen Ingress-Servern über ein internes Fabric zum Exit-Node leitet, der dem Origin am nächsten liegt.
+description: Eine Anycast-Platform, die Traffic von globalen Servern über ein internes Fabric zum Origin leitet.
 dateStart: "2026-09"
 dateEnd: "9999-99"
 featuredInCv: true

@@ -4,7 +4,6 @@ description: Plattform zum erstellen von persönlichen Landing Pages.
 dateStart: "2026-05"
 dateEnd: "9999-99"
 link: "https://goatl.ink"
-featuredInCv: true
 tags: [ nuxt, vuejs, typescript, tailwindcss, cloudflare, oidc, sqlite, html5, css3, javascript, nodejs, git, cicd, agentic-coding ]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Squall
-description: An anycast routing platform that carries traffic from global ingress servers over an internal fabric to the exit node closest to the origin.
+description: An anycast platform routing traffic from global servers through an internal fabric to the origin.
 dateStart: "2026-09"
 dateEnd: "9999-99"
 featuredInCv: true
